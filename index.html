@@ -2,52 +2,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Veer Vigyan - Official Website</title>
+  <title>Veer Vigyan - Class 10 Science</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #ffffff;
+      background-color: #fff;
       color: #111;
     }
     header {
-      background-color: #d32f2f;
+      background-color: #c62828;
       color: white;
       padding: 20px;
       text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
     }
     nav {
       background-color: #000;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
     nav a {
-      color: white;
+      color: #fff;
       padding: 14px 20px;
       display: block;
       text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
     }
     nav a:hover {
       background-color: #d32f2f;
     }
-    .hero {
-      padding: 40px;
-      background-color: #f5f5f5;
+    .tab {
+      display: none;
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+      animation: fade 0.5s ease-in-out;
+    }
+    .tab.active {
+      display: block;
+    }
+    @keyframes fade {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .tab h2 {
+      color: #d32f2f;
       text-align: center;
     }
-    .section {
-      padding: 30px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    .card {
-      background: #fff;
-      border: 1px solid #ccc;
+    .tab-content {
+      background: linear-gradient(145deg, #ffffff, #f5f5f5);
       padding: 20px;
-      margin: 15px 0;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
     footer {
       background-color: #000;
@@ -60,35 +70,39 @@
 </head>
 <body>  <header>
     <h1>Veer Vigyan</h1>
-    <p>By Veer Yaduveer | Education • Science • Growth</p>
+    <p>Focused on Class 10 - Science Only</p>
   </header>  <nav>
-    <a href="#">Home</a>
-    <a href="#teaching">Teaching</a>
-    <a href="#pdfs">PDFs</a>
-    <a href="#books">Books</a>
-    <a href="#faculty">Faculty</a>
-  </nav>  <section class="hero">
-    <h2>Welcome to Veer Vigyan</h2>
-    <p>Your journey to mastering science starts here. Stay tuned — all subjects coming soon!</p>
-  </section>  <section id="teaching" class="section">
-    <h2>Our Teaching</h2>
-    <p>We simplify science concepts for Class 9 & 10 students with clear explanations, examples, and diagrams.</p>
-  </section>  <section id="pdfs" class="section">
-    <h2>Downloadable PDFs</h2>
-    <ul>
-      <li>
-        <a href="Laws_of_Motion_Class10.pdf" target="_blank">
-          Download Class 10 Science - Laws of Motion (PDF)
-        </a>
-      </li>
-    </ul>
-  </section>  <section id="books" class="section">
-    <h2>Books</h2>
-    <p>Recommended science books and upcoming study material will be listed here soon!</p>
-  </section>  <section id="faculty" class="section">
-    <h2>Our Faculty</h2>
-    <p>Led by Veer Yaduveer, more expert teachers will join in the future to teach all subjects.</p>
-  </section>  <footer>
+    <a href="#" onclick="openTab('notes')">Notes</a>
+    <a href="#" onclick="openTab('pdfs')">PDFs</a>
+    <a href="#" onclick="openTab('books')">Books</a>
+  </nav>  <div id="notes" class="tab active">
+    <h2>Class 10 Science - Notes</h2>
+    <div class="tab-content">
+      <p>Explore handwritten and chapter-wise notes for Class 10 Science. Notes will be uploaded soon!</p>
+    </div>
+  </div>  <div id="pdfs" class="tab">
+    <h2>Class 10 Science - PDFs</h2>
+    <div class="tab-content">
+      <ul>
+        <li>
+          <a href="Laws_of_Motion_Class10.pdf" target="_blank">
+            Download: Laws of Motion - Class 10 Science (PDF)
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>  <div id="books" class="tab">
+    <h2>Class 10 Science - Books</h2>
+    <div class="tab-content">
+      <p>Recommended books and material for Class 10 Science will be added here soon.</p>
+    </div>
+  </div>  <footer>
     <p>© 2025 Veer Vigyan. All rights reserved.</p>
-  </footer></body>
+  </footer>  <script>
+    function openTab(tabId) {
+      const tabs = document.querySelectorAll('.tab');
+      tabs.forEach(tab => tab.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+    }
+  </script></body>
 </html>
