@@ -9,6 +9,11 @@
       font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(to bottom right, red, orange, yellow, green, blue, indigo, violet);
       color: #111;
+      transition: background 0.3s, color 0.3s;
+    }
+    body.dark-mode {
+      background: #121212;
+      color: #f0f0f0;
     }
     header {
       background-color: #000;
@@ -89,44 +94,82 @@
       padding: 15px;
       margin-top: 40px;
     }
+    .quiz-question, .contact-form {
+      margin-top: 20px;
+    }
+    .announcement {
+      background-color: #ffeb3b;
+      color: #000;
+      text-align: center;
+      padding: 10px;
+      font-weight: bold;
+    }
+    .dark-toggle {
+      margin: 10px auto;
+      text-align: center;
+    }
   </style>
 </head>
 <body>  <header>
     <h1>Veer Vigyan</h1>
     <p>Class 10 Science by Veer Yaduveer</p>
-    <h1>Veer Vigyan</h1>
-    <p>Focused on Class 10 Science Only</p>
-  </header>  <div class="intro">
+  </header>  <div class="announcement">
+    New notes and books for Chapter 1 coming this week!
+  </div>  <div class="intro">
     <h2>Welcome to Veer Vigyan</h2>
     <p>
       Veer Vigyan is a vibrant digital learning platform created to make Class 10 Science exciting and easy to understand.
       With colorful presentations, downloadable resources, and clear concepts, students will love learning physics, chemistry,
       and biology. Our mission is to make education inspiring and accessible to all — starting with Class 10 Science and growing beyond!
     </p>
+  </div>  <div class="dark-toggle">
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
   </div>  <nav>
     <a href="javascript:void(0)" onclick="openTab('notes')">Notes</a>
     <a href="javascript:void(0)" onclick="openTab('pdfs')">PDFs</a>
     <a href="javascript:void(0)" onclick="openTab('books')">Books</a>
+    <a href="javascript:void(0)" onclick="openTab('quiz')">Quiz</a>
+    <a href="javascript:void(0)" onclick="openTab('contact')">Contact</a>
   </nav>  <div id="notes" class="tab active">
     <h2>Class 10 Science - Notes</h2>
     <div class="tab-content">
-      <p>Explore handwritten and chapter-wise notes for Class 10 Science. Notes will be uploaded soon!</p>
+      <ul>
+        <li>Chapter 1: Laws of Motion (Coming Soon)</li>
+        <li>Chapter 2: Chemical Reactions (Coming Soon)</li>
+      </ul>
     </div>
   </div>  <div id="pdfs" class="tab">
     <h2>Class 10 Science - PDFs</h2>
     <div class="tab-content">
-      <ul>
-        <li>
-          <a href="Laws_of_Motion_Class10.pdf" target="_blank">
-            Download: Laws of Motion - Class 10 Science (PDF)
-          </a>
-        </li>
-      </ul>
+      <button><a href="Laws_of_Motion_Class10.pdf" download>Download: Laws of Motion PDF</a></button>
     </div>
   </div>  <div id="books" class="tab">
     <h2>Class 10 Science - Books</h2>
     <div class="tab-content">
-      <p>Recommended books and material for Class 10 Science will be added here soon.</p>
+      <p>Recommended books and material will be added here soon.</p>
+    </div>
+  </div>  <div id="quiz" class="tab">
+    <h2>Mini Quiz - Science</h2>
+    <div class="tab-content">
+      <div class="quiz-question">
+        <p><strong>Q1:</strong> What is the SI unit of force?</p>
+        <button onclick="alert('Correct!')">Newton</button>
+        <button onclick="alert('Try again')">Joule</button>
+        <button onclick="alert('Try again')">Watt</button>
+      </div>
+    </div>
+  </div>  <div id="contact" class="tab">
+    <h2>Contact Veer Vigyan</h2>
+    <div class="tab-content">
+      <form class="contact-form">
+        <label>Name:</label><br />
+        <input type="text" name="name" required /><br />
+        <label>Email:</label><br />
+        <input type="email" name="email" required /><br />
+        <label>Message:</label><br />
+        <textarea name="message" rows="4" required></textarea><br />
+        <button type="submit">Send Message</button>
+      </form>
     </div>
   </div>  <footer>
     <p>© 2025 Veer Vigyan. All rights reserved.</p>
@@ -135,6 +178,9 @@
       const tabs = document.querySelectorAll('.tab');
       tabs.forEach(tab => tab.classList.remove('active'));
       document.getElementById(tabId).classList.add('active');
+    }
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
     }
   </script></body>
 </html>
