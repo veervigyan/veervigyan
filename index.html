@@ -7,18 +7,18 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #fff;
+      background: linear-gradient(to bottom right, red, orange, yellow, green, blue, indigo, violet);
       color: #111;
     }
     header {
-      background-color: #c62828;
+      background-color: #000;
       color: white;
       padding: 20px;
       text-align: center;
       box-shadow: 0 4px 6px rgba(0,0,0,0.2);
     }
     nav {
-      background-color: #000;
+      background-color: #222;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
@@ -33,7 +33,7 @@
       transition: background 0.3s;
     }
     nav a:hover {
-      background-color: #d32f2f;
+      background-color: #ff4081;
     }
     .tab {
       display: none;
@@ -50,14 +50,34 @@
       to { opacity: 1; }
     }
     .tab h2 {
-      color: #d32f2f;
       text-align: center;
+      font-size: 28px;
+      background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
     .tab-content {
-      background: linear-gradient(145deg, #ffffff, #f5f5f5);
+      background: rgba(255, 255, 255, 0.85);
       padding: 20px;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .intro {
+      padding: 30px;
+      text-align: center;
+      background-color: rgba(255,255,255,0.9);
+      max-width: 1000px;
+      margin: auto;
+      border-radius: 12px;
+      margin-top: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+    .intro h2 {
+      color: #d32f2f;
+    }
+    .intro p {
+      font-size: 18px;
+      line-height: 1.6;
     }
     footer {
       background-color: #000;
@@ -70,8 +90,15 @@
 </head>
 <body>  <header>
     <h1>Veer Vigyan</h1>
-    <p>Focused on Class 10 - Science Only</p>
-  </header>  <nav>
+    <p>Focused on Class 10 Science Only</p>
+  </header>  <div class="intro">
+    <h2>Welcome to Veer Vigyan</h2>
+    <p>
+      Veer Vigyan is a vibrant digital learning platform created to make Class 10 Science exciting and easy to understand.
+      With colorful presentations, downloadable resources, and clear concepts, students will love learning physics, chemistry,
+      and biology. Our mission is to make education inspiring and accessible to all — starting with Class 10 Science and growing beyond!
+    </p>
+  </div>  <nav>
     <a href="#" onclick="openTab('notes')">Notes</a>
     <a href="#" onclick="openTab('pdfs')">PDFs</a>
     <a href="#" onclick="openTab('books')">Books</a>
