@@ -22,18 +22,21 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
+      gap: 30px;
+      padding: 10px 0;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
     nav a {
       color: #fff;
-      padding: 14px 20px;
+      padding: 12px 20px;
       display: block;
       text-decoration: none;
       font-weight: bold;
       transition: background 0.3s;
+      border-radius: 8px;
     }
     nav a:hover {
-  background-color: #e53935; /* Bright red */
+      background-color: #e53935;
     }
     .tab {
       display: none;
@@ -98,11 +101,11 @@
       With colorful presentations, downloadable resources, and clear concepts, students will love learning physics, chemistry,
       and biology. Our mission is to make education inspiring and accessible to all — starting with Class 10 Science and growing beyond!
     </p>
-  <div <nav>
-  <a href="javascript:void(0)" onclick="openTab('notes')">Notes</a>
-  <a href="javascript:void(0)" onclick="openTab('pdfs')">PDFs</a>
-  <a href="javascript:void(0)" onclick="openTab('books')">Books</a>
-</nav>  <div id="notes" class="tab active">
+  </div>  <nav>
+    <a href="javascript:void(0)" onclick="openTab('notes')">Notes</a>
+    <a href="javascript:void(0)" onclick="openTab('pdfs')">PDFs</a>
+    <a href="javascript:void(0)" onclick="openTab('books')">Books</a>
+  </nav>  <div id="notes" class="tab active">
     <h2>Class 10 Science - Notes</h2>
     <div class="tab-content">
       <p>Explore handwritten and chapter-wise notes for Class 10 Science. Notes will be uploaded soon!</p>
