@@ -56,7 +56,7 @@
     .tab h2 {
       text-align: center;
       font-size: 28px;
-      color: #e53935; /* Bright red heading */
+      color: #e53935;
     }
     .tab-content {
       background: rgba(255, 255, 255, 0.9);
@@ -98,6 +98,18 @@
       padding: 10px;
       font-weight: bold;
     }
+    .rating-stars {
+      text-align: center;
+      font-size: 24px;
+      margin-top: 10px;
+    }
+    .rating-stars span {
+      cursor: pointer;
+      color: gray;
+    }
+    .rating-stars span.selected {
+      color: gold;
+    }
   </style>
 </head>
 <body>  <header>
@@ -119,6 +131,7 @@
     <a href="javascript:void(0)" onclick="openTab('quiz')">Quiz</a>
     <a href="javascript:void(0)" onclick="openTab('mcq')">MCQs</a>
     <a href="javascript:void(0)" onclick="openTab('test')">Test Series</a>
+    <a href="javascript:void(0)" onclick="openTab('rating')">Rate Us</a>
   </nav>  <div id="notes" class="tab active">
     <h2>Class 10 Science - Notes</h2>
     <div class="tab-content">
@@ -152,6 +165,12 @@
         <button onclick="alert('Try again')">CO₂</button>
         <button onclick="alert('Try again')">NaCl</button>
       </div>
+      <div class="quiz-question">
+        <p><strong>Q3:</strong> What is the powerhouse of the cell?</p>
+        <button onclick="alert('Correct!')">Mitochondria</button>
+        <button onclick="alert('Try again')">Nucleus</button>
+        <button onclick="alert('Try again')">Chloroplast</button>
+      </div>
     </div>
   </div>  <div id="mcq" class="tab">
     <h2>MCQs Created by ChatGPT</h2>
@@ -167,12 +186,32 @@
     <li>Ribosome</li>
     <li>Cytoplasm</li>
   </ul>
+
+  <p><strong>3. The boiling point of water is?</strong></p>
+  <ul>
+    <li>100°C</li>
+    <li>0°C</li>
+    <li>212°F</li>
+  </ul>
 </div>
 
   </div>  <div id="test" class="tab">
     <h2>Test Series - Coming Soon</h2>
     <div class="tab-content">
       <p>Full chapter-wise test series will be uploaded shortly. Stay tuned!</p>
+    </div>
+  </div>  <div id="rating" class="tab">
+    <h2>Rate Veer Vigyan</h2>
+    <div class="tab-content">
+      <p>How would you rate your learning experience?</p>
+      <div class="rating-stars">
+        <span onclick="rate(1)">&#9733;</span>
+        <span onclick="rate(2)">&#9733;</span>
+        <span onclick="rate(3)">&#9733;</span>
+        <span onclick="rate(4)">&#9733;</span>
+        <span onclick="rate(5)">&#9733;</span>
+      </div>
+      <p id="rating-result" style="text-align:center; font-weight:bold;"></p>
     </div>
   </div>  <footer>
     <p>© 2025 Veer Vigyan. All rights reserved.</p>
@@ -181,6 +220,13 @@
       const tabs = document.querySelectorAll('.tab');
       tabs.forEach(tab => tab.classList.remove('active'));
       document.getElementById(tabId).classList.add('active');
+    }
+    function rate(stars) {
+      const allStars = document.querySelectorAll('.rating-stars span');
+      allStars.forEach((star, index) => {
+        star.classList.toggle('selected', index < stars);
+      });
+      document.getElementById('rating-result').textContent = `You rated us ${stars} star(s)!`;
     }
   </script></body>
 </html>
