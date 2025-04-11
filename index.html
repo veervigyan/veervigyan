@@ -11,10 +11,6 @@
       color: #111;
       transition: background 0.3s, color 0.3s;
     }
-    body.dark-mode {
-      background: #121212;
-      color: #f0f0f0;
-    }
     header {
       background-color: #000;
       color: white;
@@ -60,12 +56,10 @@
     .tab h2 {
       text-align: center;
       font-size: 28px;
-      background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: #e53935; /* Bright red heading */
     }
     .tab-content {
-      background: rgba(255, 255, 255, 0.85);
+      background: rgba(255, 255, 255, 0.9);
       padding: 20px;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -94,7 +88,7 @@
       padding: 15px;
       margin-top: 40px;
     }
-    .quiz-question, .contact-form {
+    .quiz-question, .quiz-section, .test-series, .mcq-section {
       margin-top: 20px;
     }
     .announcement {
@@ -103,10 +97,6 @@
       text-align: center;
       padding: 10px;
       font-weight: bold;
-    }
-    .dark-toggle {
-      margin: 10px auto;
-      text-align: center;
     }
   </style>
 </head>
@@ -122,14 +112,13 @@
       With colorful presentations, downloadable resources, and clear concepts, students will love learning physics, chemistry,
       and biology. Our mission is to make education inspiring and accessible to all — starting with Class 10 Science and growing beyond!
     </p>
-  </div>  <div class="dark-toggle">
-    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
   </div>  <nav>
     <a href="javascript:void(0)" onclick="openTab('notes')">Notes</a>
     <a href="javascript:void(0)" onclick="openTab('pdfs')">PDFs</a>
     <a href="javascript:void(0)" onclick="openTab('books')">Books</a>
     <a href="javascript:void(0)" onclick="openTab('quiz')">Quiz</a>
-    <a href="javascript:void(0)" onclick="openTab('contact')">Contact</a>
+    <a href="javascript:void(0)" onclick="openTab('mcq')">MCQs</a>
+    <a href="javascript:void(0)" onclick="openTab('test')">Test Series</a>
   </nav>  <div id="notes" class="tab active">
     <h2>Class 10 Science - Notes</h2>
     <div class="tab-content">
@@ -149,7 +138,7 @@
       <p>Recommended books and material will be added here soon.</p>
     </div>
   </div>  <div id="quiz" class="tab">
-    <h2>Mini Quiz - Science</h2>
+    <h2>Mini Quizzes - Science</h2>
     <div class="tab-content">
       <div class="quiz-question">
         <p><strong>Q1:</strong> What is the SI unit of force?</p>
@@ -157,19 +146,33 @@
         <button onclick="alert('Try again')">Joule</button>
         <button onclick="alert('Try again')">Watt</button>
       </div>
+      <div class="quiz-question">
+        <p><strong>Q2:</strong> What is the chemical formula for water?</p>
+        <button onclick="alert('Correct!')">H₂O</button>
+        <button onclick="alert('Try again')">CO₂</button>
+        <button onclick="alert('Try again')">NaCl</button>
+      </div>
     </div>
-  </div>  <div id="contact" class="tab">
-    <h2>Contact Veer Vigyan</h2>
+  </div>  <div id="mcq" class="tab">
+    <h2>MCQs Created by ChatGPT</h2>
     <div class="tab-content">
-      <form class="contact-form">
-        <label>Name:</label><br />
-        <input type="text" name="name" required /><br />
-        <label>Email:</label><br />
-        <input type="email" name="email" required /><br />
-        <label>Message:</label><br />
-        <textarea name="message" rows="4" required></textarea><br />
-        <button type="submit">Send Message</button>
-      </form>
+      <p><strong>1. Which gas is necessary for combustion?</strong></p>
+      <ul>
+        <li>Oxygen</li>
+        <li>Carbon Dioxide</li>
+        <li>Hydrogen</li>
+      </ul><p><strong>2. Which part of the cell contains the genetic material?</strong></p>
+  <ul>
+    <li>Nucleus</li>
+    <li>Ribosome</li>
+    <li>Cytoplasm</li>
+  </ul>
+</div>
+
+  </div>  <div id="test" class="tab">
+    <h2>Test Series - Coming Soon</h2>
+    <div class="tab-content">
+      <p>Full chapter-wise test series will be uploaded shortly. Stay tuned!</p>
     </div>
   </div>  <footer>
     <p>© 2025 Veer Vigyan. All rights reserved.</p>
@@ -178,9 +181,6 @@
       const tabs = document.querySelectorAll('.tab');
       tabs.forEach(tab => tab.classList.remove('active'));
       document.getElementById(tabId).classList.add('active');
-    }
-    function toggleDarkMode() {
-      document.body.classList.toggle("dark-mode");
     }
   </script></body>
 </html>
