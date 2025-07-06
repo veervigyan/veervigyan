@@ -9,13 +9,13 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      color: black;
-      background: linear-gradient(-45deg, #d0f0c0, #ffffff, #c0e8f0, #a8e6a3);
-      background-size: 600% 600%;
-      animation: gradientBG 20s ease infinite;
+      color: white;
+      background: linear-gradient(270deg, #d4fddc, #ffffff, #cfefff, #d4fddc);
+      background-size: 800% 800%;
+      animation: smoothShift 40s ease infinite;
     }
 
-    @keyframes gradientBG {
+    @keyframes smoothShift {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
@@ -55,11 +55,10 @@
     section {
       display: none;
       padding: 2rem;
-      background: rgba(0, 0, 0, 0.85);
+      background: black;
       margin: 2rem auto;
       max-width: 900px;
       border-radius: 12px;
-      color: white;
     }
 
     section.active {
@@ -102,7 +101,6 @@
       background: rgba(0, 0, 0, 0.7);
       margin-top: 3rem;
       font-size: 0.9rem;
-      color: white;
     }
 
     button {
@@ -172,62 +170,106 @@
 
   <!-- QUIZ -->
   <section id="quiz" class="quiz">
-    <h2>Science Quiz</h2>
+    <h2>Quiz Section</h2>
 
     <div class="question">
-      <p>1. Which gas is essential for photosynthesis?</p>
-      <label><input type="radio" name="q1" value="correct"> Carbon Dioxide</label>
-      <label><input type="radio" name="q1" value="wrong"> Oxygen</label>
-      <label><input type="radio" name="q1" value="wrong"> Nitrogen</label>
+      <p>1. What is the boiling point of water?</p>
+      <label><input type="radio" name="q1" value="wrong"> 90°C</label>
+      <label><input type="radio" name="q1" value="correct"> 100°C</label>
+      <label><input type="radio" name="q1" value="wrong"> 120°C</label>
       <div class="result" id="result-q1"></div>
     </div>
 
     <div class="question">
-      <p>2. What is the chemical formula of water?</p>
-      <label><input type="radio" name="q2" value="correct"> H₂O</label>
-      <label><input type="radio" name="q2" value="wrong"> CO₂</label>
-      <label><input type="radio" name="q2" value="wrong"> O₂</label>
+      <p>2. Which planet is known as the Red Planet?</p>
+      <label><input type="radio" name="q2" value="wrong"> Earth</label>
+      <label><input type="radio" name="q2" value="correct"> Mars</label>
+      <label><input type="radio" name="q2" value="wrong"> Venus</label>
       <div class="result" id="result-q2"></div>
     </div>
 
     <div class="question">
-      <p>3. Which organ is responsible for pumping blood?</p>
-      <label><input type="radio" name="q3" value="correct"> Heart</label>
-      <label><input type="radio" name="q3" value="wrong"> Liver</label>
-      <label><input type="radio" name="q3" value="wrong"> Lungs</label>
+      <p>3. Who is known as the father of computers?</p>
+      <label><input type="radio" name="q3" value="correct"> Charles Babbage</label>
+      <label><input type="radio" name="q3" value="wrong"> Albert Einstein</label>
+      <label><input type="radio" name="q3" value="wrong"> Isaac Newton</label>
       <div class="result" id="result-q3"></div>
+    </div>
+
+    <div class="question">
+      <p>4. What is H2O commonly known as?</p>
+      <label><input type="radio" name="q4" value="correct"> Water</label>
+      <label><input type="radio" name="q4" value="wrong"> Oxygen</label>
+      <label><input type="radio" name="q4" value="wrong"> Hydrogen</label>
+      <div class="result" id="result-q4"></div>
+    </div>
+
+    <div class="question">
+      <p>5. How many continents are there?</p>
+      <label><input type="radio" name="q5" value="wrong"> 5</label>
+      <label><input type="radio" name="q5" value="correct"> 7</label>
+      <label><input type="radio" name="q5" value="wrong"> 6</label>
+      <div class="result" id="result-q5"></div>
+    </div>
+
+    <div class="question">
+      <p>6. What gas do we breathe in?</p>
+      <label><input type="radio" name="q6" value="wrong"> Carbon Dioxide</label>
+      <label><input type="radio" name="q6" value="correct"> Oxygen</label>
+      <label><input type="radio" name="q6" value="wrong"> Nitrogen</label>
+      <div class="result" id="result-q6"></div>
+    </div>
+
+    <div class="question">
+      <p>7. Which is the largest planet?</p>
+      <label><input type="radio" name="q7" value="wrong"> Earth</label>
+      <label><input type="radio" name="q7" value="correct"> Jupiter</label>
+      <label><input type="radio" name="q7" value="wrong"> Venus</label>
+      <div class="result" id="result-q7"></div>
+    </div>
+
+    <div class="question">
+      <p>8. What is the freezing point of water?</p>
+      <label><input type="radio" name="q8" value="correct"> 0°C</label>
+      <label><input type="radio" name="q8" value="wrong"> 10°C</label>
+      <label><input type="radio" name="q8" value="wrong"> 5°C</label>
+      <div class="result" id="result-q8"></div>
+    </div>
+
+    <div class="question">
+      <p>9. Sun is a?</p>
+      <label><input type="radio" name="q9" value="correct"> Star</label>
+      <label><input type="radio" name="q9" value="wrong"> Planet</label>
+      <label><input type="radio" name="q9" value="wrong"> Moon</label>
+      <div class="result" id="result-q9"></div>
+    </div>
+
+    <div class="question">
+      <p>10. What is the main source of energy on Earth?</p>
+      <label><input type="radio" name="q10" value="correct"> Sun</label>
+      <label><input type="radio" name="q10" value="wrong"> Moon</label>
+      <label><input type="radio" name="q10" value="wrong"> Stars</label>
+      <div class="result" id="result-q10"></div>
     </div>
 
     <button onclick="checkAnswers()">Submit Answers</button>
   </section>
 
-  <!-- MCQS -->
+  <!-- MCQs -->
   <section id="mcqs" class="quiz">
-    <h2>Science MCQs</h2>
+    <h2>MCQs Section</h2>
+
+    <!-- Add your science MCQs here as needed -->
 
     <div class="question">
-      <p>1. Which metal is liquid at room temperature?</p>
-      <label><input type="radio" name="m1" value="correct"> Mercury</label>
-      <label><input type="radio" name="m1" value="wrong"> Gold</label>
-      <label><input type="radio" name="m1" value="wrong"> Silver</label>
+      <p>1. What is the chemical symbol for Gold?</p>
+      <label><input type="radio" name="m1" value="correct"> Au</label>
+      <label><input type="radio" name="m1" value="wrong"> Ag</label>
+      <label><input type="radio" name="m1" value="wrong"> Go</label>
       <div class="result" id="result-m1"></div>
     </div>
 
-    <div class="question">
-      <p>2. The main gas in the air we breathe is:</p>
-      <label><input type="radio" name="m2" value="correct"> Nitrogen</label>
-      <label><input type="radio" name="m2" value="wrong"> Oxygen</label>
-      <label><input type="radio" name="m2" value="wrong"> Carbon Dioxide</label>
-      <div class="result" id="result-m2"></div>
-    </div>
-
-    <div class="question">
-      <p>3. What is the SI unit of force?</p>
-      <label><input type="radio" name="m3" value="correct"> Newton</label>
-      <label><input type="radio" name="m3" value="wrong"> Joule</label>
-      <label><input type="radio" name="m3" value="wrong"> Watt</label>
-      <div class="result" id="result-m3"></div>
-    </div>
+    <!-- More MCQs... -->
 
     <button onclick="checkMCQs()">Submit MCQs</button>
   </section>
@@ -245,7 +287,7 @@
     }
 
     function checkAnswers() {
-      for (let i = 1; i <= 3; i++) {
+      for (let i = 1; i <= 10; i++) {
         const options = document.getElementsByName(`q${i}`);
         options.forEach(option => {
           if (option.checked) {
@@ -257,11 +299,11 @@
     }
 
     function checkMCQs() {
-      for (let i = 1; i <= 3; i++) {
+      for (let i = 1; i <= 10; i++) {
         const options = document.getElementsByName(`m${i}`);
         options.forEach(option => {
           if (option.checked) {
-            const result = document.getElementById(`result-m${i}`);
+            const result = document.getElementById(`result-m" + i`);
             result.textContent = option.value === "correct" ? "Correct!" : "Incorrect.";
           }
         });
@@ -270,4 +312,4 @@
   </script>
 
 </body>
-               </html>
+  </html>
