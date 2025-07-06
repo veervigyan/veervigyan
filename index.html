@@ -9,18 +9,15 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      color: black;
-      background: linear-gradient(-45deg, #f3f4f6, #e3f2fd, #fff3e0, #e8f5e9, #fce4ec, #e0f7fa, #f1f8e9);
-      background-size: 600% 600%;
-      animation: softBackground 35s ease infinite;
-      transition: background 1s;
+      color: white;
+      background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet, red);
+      background-size: 2000% 2000%;
+      animation: rainbow 40s linear infinite;
     }
 
-    @keyframes softBackground {
+    @keyframes rainbow {
       0% { background-position: 0% 50%; }
-      25% { background-position: 50% 50%; }
       50% { background-position: 100% 50%; }
-      75% { background-position: 50% 50%; }
       100% { background-position: 0% 50%; }
     }
 
@@ -57,11 +54,10 @@
     section {
       display: none;
       padding: 2rem;
-      background: rgba(255, 255, 255, 0.95);
+      background: black;
       margin: 2rem auto;
       max-width: 900px;
       border-radius: 12px;
-      color: #000;
     }
 
     section.active {
@@ -95,7 +91,7 @@
     .result {
       margin-top: 10px;
       font-weight: bold;
-      color: green;
+      color: yellow;
     }
 
     footer {
@@ -104,22 +100,17 @@
       background: rgba(0, 0, 0, 0.7);
       margin-top: 3rem;
       font-size: 0.9rem;
-      color: white;
     }
 
     button {
       margin-top: 10px;
       padding: 5px 15px;
       border: none;
-      background: #000;
-      color: white;
+      background: #fff;
+      color: black;
       font-weight: bold;
       border-radius: 8px;
       cursor: pointer;
-    }
-
-    button:hover {
-      background: #333;
     }
   </style>
 </head>
@@ -179,6 +170,7 @@
   <!-- QUIZ -->
   <section id="quiz" class="quiz">
     <h2>Quiz Section</h2>
+
     <div class="question">
       <p>1. What is the boiling point of water?</p>
       <label><input type="radio" name="q1" value="wrong"> 90°C</label>
@@ -195,12 +187,77 @@
       <div class="result" id="result-q2"></div>
     </div>
 
+    <!-- Extra 8 Questions -->
+    <div class="question">
+      <p>3. Who is known as the father of computers?</p>
+      <label><input type="radio" name="q3" value="correct"> Charles Babbage</label>
+      <label><input type="radio" name="q3" value="wrong"> Albert Einstein</label>
+      <label><input type="radio" name="q3" value="wrong"> Isaac Newton</label>
+      <div class="result" id="result-q3"></div>
+    </div>
+
+    <div class="question">
+      <p>4. What is H2O commonly known as?</p>
+      <label><input type="radio" name="q4" value="correct"> Water</label>
+      <label><input type="radio" name="q4" value="wrong"> Oxygen</label>
+      <label><input type="radio" name="q4" value="wrong"> Hydrogen</label>
+      <div class="result" id="result-q4"></div>
+    </div>
+
+    <div class="question">
+      <p>5. How many continents are there?</p>
+      <label><input type="radio" name="q5" value="wrong"> 5</label>
+      <label><input type="radio" name="q5" value="correct"> 7</label>
+      <label><input type="radio" name="q5" value="wrong"> 6</label>
+      <div class="result" id="result-q5"></div>
+    </div>
+
+    <div class="question">
+      <p>6. What gas do we breathe in?</p>
+      <label><input type="radio" name="q6" value="wrong"> Carbon Dioxide</label>
+      <label><input type="radio" name="q6" value="correct"> Oxygen</label>
+      <label><input type="radio" name="q6" value="wrong"> Nitrogen</label>
+      <div class="result" id="result-q6"></div>
+    </div>
+
+    <div class="question">
+      <p>7. Which is the largest planet?</p>
+      <label><input type="radio" name="q7" value="wrong"> Earth</label>
+      <label><input type="radio" name="q7" value="correct"> Jupiter</label>
+      <label><input type="radio" name="q7" value="wrong"> Venus</label>
+      <div class="result" id="result-q7"></div>
+    </div>
+
+    <div class="question">
+      <p>8. What is the freezing point of water?</p>
+      <label><input type="radio" name="q8" value="correct"> 0°C</label>
+      <label><input type="radio" name="q8" value="wrong"> 10°C</label>
+      <label><input type="radio" name="q8" value="wrong"> 5°C</label>
+      <div class="result" id="result-q8"></div>
+    </div>
+
+    <div class="question">
+      <p>9. Sun is a?</p>
+      <label><input type="radio" name="q9" value="correct"> Star</label>
+      <label><input type="radio" name="q9" value="wrong"> Planet</label>
+      <label><input type="radio" name="q9" value="wrong"> Moon</label>
+      <div class="result" id="result-q9"></div>
+    </div>
+
+    <div class="question">
+      <p>10. What is the main source of energy on Earth?</p>
+      <label><input type="radio" name="q10" value="correct"> Sun</label>
+      <label><input type="radio" name="q10" value="wrong"> Moon</label>
+      <label><input type="radio" name="q10" value="wrong"> Stars</label>
+      <div class="result" id="result-q10"></div>
+    </div>
+
     <button onclick="checkAnswers()">Submit Answers</button>
   </section>
-
-  <!-- MCQs -->
+  <!-- MCQS -->
   <section id="mcqs" class="quiz">
     <h2>MCQs Section</h2>
+
     <div class="question">
       <p>1. What is the chemical symbol for Gold?</p>
       <label><input type="radio" name="m1" value="correct"> Au</label>
@@ -215,6 +272,70 @@
       <label><input type="radio" name="m2" value="wrong"> Atlantic Ocean</label>
       <label><input type="radio" name="m2" value="wrong"> Indian Ocean</label>
       <div class="result" id="result-m2"></div>
+    </div>
+
+    <div class="question">
+      <p>3. Who wrote 'Discovery of India'?</p>
+      <label><input type="radio" name="m3" value="correct"> Jawaharlal Nehru</label>
+      <label><input type="radio" name="m3" value="wrong"> Mahatma Gandhi</label>
+      <label><input type="radio" name="m3" value="wrong"> Rabindranath Tagore</label>
+      <div class="result" id="result-m3"></div>
+    </div>
+
+    <div class="question">
+      <p>4. Which organ purifies our blood?</p>
+      <label><input type="radio" name="m4" value="correct"> Kidney</label>
+      <label><input type="radio" name="m4" value="wrong"> Heart</label>
+      <label><input type="radio" name="m4" value="wrong"> Lungs</label>
+      <div class="result" id="result-m4"></div>
+    </div>
+
+    <div class="question">
+      <p>5. What is the national flower of India?</p>
+      <label><input type="radio" name="m5" value="correct"> Lotus</label>
+      <label><input type="radio" name="m5" value="wrong"> Rose</label>
+      <label><input type="radio" name="m5" value="wrong"> Sunflower</label>
+      <div class="result" id="result-m5"></div>
+    </div>
+
+    <div class="question">
+      <p>6. Who invented the telephone?</p>
+      <label><input type="radio" name="m6" value="correct"> Alexander Graham Bell</label>
+      <label><input type="radio" name="m6" value="wrong"> Thomas Edison</label>
+      <label><input type="radio" name="m6" value="wrong"> Nikola Tesla</label>
+      <div class="result" id="result-m6"></div>
+    </div>
+
+    <div class="question">
+      <p>7. What is the capital of Japan?</p>
+      <label><input type="radio" name="m7" value="correct"> Tokyo</label>
+      <label><input type="radio" name="m7" value="wrong"> Kyoto</label>
+      <label><input type="radio" name="m7" value="wrong"> Osaka</label>
+      <div class="result" id="result-m7"></div>
+    </div>
+
+    <div class="question">
+      <p>8. Which gas is most abundant in the Earth's atmosphere?</p>
+      <label><input type="radio" name="m8" value="correct"> Nitrogen</label>
+      <label><input type="radio" name="m8" value="wrong"> Oxygen</label>
+      <label><input type="radio" name="m8" value="wrong"> Carbon Dioxide</label>
+      <div class="result" id="result-m8"></div>
+    </div>
+
+    <div class="question">
+      <p>9. How many players are there in a cricket team?</p>
+      <label><input type="radio" name="m9" value="correct"> 11</label>
+      <label><input type="radio" name="m9" value="wrong"> 12</label>
+      <label><input type="radio" name="m9" value="wrong"> 10</label>
+      <div class="result" id="result-m9"></div>
+    </div>
+
+    <div class="question">
+      <p>10. Which is the longest river in the world?</p>
+      <label><input type="radio" name="m10" value="correct"> Nile</label>
+      <label><input type="radio" name="m10" value="wrong"> Amazon</label>
+      <label><input type="radio" name="m10" value="wrong"> Ganga</label>
+      <div class="result" id="result-m10"></div>
     </div>
 
     <button onclick="checkMCQs()">Submit MCQs</button>
@@ -238,7 +359,11 @@
         options.forEach(option => {
           if (option.checked) {
             const result = document.getElementById(`result-q${i}`);
-            result.textContent = option.value === "correct" ? "Correct!" : "Incorrect.";
+            if (option.value === "correct") {
+              result.textContent = "Correct!";
+            } else {
+              result.textContent = "Incorrect.";
+            }
           }
         });
       }
@@ -250,7 +375,11 @@
         options.forEach(option => {
           if (option.checked) {
             const result = document.getElementById(`result-m${i}`);
-            result.textContent = option.value === "correct" ? "Correct!" : "Incorrect.";
+            if (option.value === "correct") {
+              result.textContent = "Correct!";
+            } else {
+              result.textContent = "Incorrect.";
+            }
           }
         });
       }
@@ -258,4 +387,5 @@
   </script>
 
 </body>
-</html>
+  </html>
+        
