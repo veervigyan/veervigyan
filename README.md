@@ -1,6 +1,6 @@
 # Veer Vigyan
 
-**Veer Vigyan** (meaning *All Science*) is an educational website created by **Veer Yaduveer** to inspire and support students in their science learning journey.  
+**Veer Vigyan** is an educational website created by **Veer Yaduveer** to inspire and support students in their science learning journey.  
 The platform is designed with vibrant visuals and user-friendly features to make learning engaging and effective.
 
 ## Website Highlights
