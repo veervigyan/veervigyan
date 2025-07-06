@@ -9,16 +9,18 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      color: #000;
-      background: linear-gradient(120deg, #f5f7fa, #e0ecf8, #fdfbfb);
-      background-size: 300% 300%;
-      animation: softGlow 40s ease infinite;
+      color: black;
+      background: linear-gradient(-45deg, #f3f4f6, #e3f2fd, #fff3e0, #e8f5e9, #fce4ec);
+      background-size: 500% 500%;
+      animation: softBackground 30s ease infinite;
       transition: background 1s;
     }
 
-    @keyframes softGlow {
+    @keyframes softBackground {
       0% { background-position: 0% 50%; }
+      25% { background-position: 50% 50%; }
       50% { background-position: 100% 50%; }
+      75% { background-position: 50% 50%; }
       100% { background-position: 0% 50%; }
     }
 
@@ -55,12 +57,11 @@
     section {
       display: none;
       padding: 2rem;
-      background: white;
-      color: black;
+      background: rgba(255, 255, 255, 0.9);
       margin: 2rem auto;
       max-width: 900px;
       border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      color: #000;
     }
 
     section.active {
@@ -101,16 +102,16 @@
       text-align: center;
       padding: 1rem;
       background: rgba(0, 0, 0, 0.7);
-      color: white;
       margin-top: 3rem;
       font-size: 0.9rem;
+      color: white;
     }
 
     button {
       margin-top: 10px;
-      padding: 8px 15px;
+      padding: 5px 15px;
       border: none;
-      background: #007bff;
+      background: #000;
       color: white;
       font-weight: bold;
       border-radius: 8px;
@@ -118,28 +119,7 @@
     }
 
     button:hover {
-      background: #0056b3;
-    }
-
-    @media (max-width: 600px) {
-      nav a {
-        font-size: 0.9rem;
-        padding: 8px 10px;
-      }
-
-      .intro {
-        font-size: 1rem;
-        padding: 1rem;
-      }
-
-      section {
-        padding: 1rem;
-        margin: 1rem;
-      }
-
-      button {
-        width: 100%;
-      }
+      background: #333;
     }
   </style>
 </head>
@@ -156,6 +136,7 @@
     <a onclick="showPage('mcqs')">MCQs</a>
   </nav>
 
+  <!-- HOME -->
   <section id="home" class="active">
     <h1>Welcome to Veer Vigyan</h1>
     <p class="intro">
@@ -165,46 +146,62 @@
     </p>
   </section>
 
+  <!-- PDF -->
   <section id="pdf">
     <h2>PDF Section</h2>
     <p>Helpful study PDFs will be available here soon!</p>
   </section>
 
+  <!-- BOOKS -->
   <section id="books">
     <h2>Books Section</h2>
     <p>Collection of important books for students. (Coming soon!)</p>
   </section>
 
+  <!-- CLASSES -->
   <section id="classes">
     <h2>Classes Section</h2>
     <p>Watch lessons and video classes here. (Coming soon!)</p>
   </section>
 
+  <!-- TEST SERIES -->
   <section id="test">
     <h2>Test Series</h2>
     <p>Practice tests and series coming soon!</p>
   </section>
 
+  <!-- NOTES -->
   <section id="notes">
     <h2>Notes Section</h2>
     <p>Important notes and summaries will be available here!</p>
   </section>
 
+  <!-- QUIZ -->
   <section id="quiz" class="quiz">
     <h2>Quiz Section</h2>
-
-    <!-- 10 Quiz Questions (same as before) -->
-    <!-- Keep your previous quiz questions code here (no changes needed) -->
-
+    <!-- Sample Questions -->
+    <div class="question">
+      <p>1. What is the boiling point of water?</p>
+      <label><input type="radio" name="q1" value="wrong"> 90°C</label>
+      <label><input type="radio" name="q1" value="correct"> 100°C</label>
+      <label><input type="radio" name="q1" value="wrong"> 120°C</label>
+      <div class="result" id="result-q1"></div>
+    </div>
+    <!-- (Add more questions here just like before) -->
     <button onclick="checkAnswers()">Submit Answers</button>
   </section>
 
+  <!-- MCQs -->
   <section id="mcqs" class="quiz">
     <h2>MCQs Section</h2>
-
-    <!-- 10 MCQ Questions (same as before) -->
-    <!-- Keep your previous MCQ questions code here (no changes needed) -->
-
+    <div class="question">
+      <p>1. What is the chemical symbol for Gold?</p>
+      <label><input type="radio" name="m1" value="correct"> Au</label>
+      <label><input type="radio" name="m1" value="wrong"> Ag</label>
+      <label><input type="radio" name="m1" value="wrong"> Go</label>
+      <div class="result" id="result-m1"></div>
+    </div>
+    <!-- (Add more MCQs here just like before) -->
     <button onclick="checkMCQs()">Submit MCQs</button>
   </section>
 
@@ -221,55 +218,27 @@
     }
 
     function checkAnswers() {
-      let score = 0;
       for (let i = 1; i <= 10; i++) {
         const options = document.getElementsByName(`q${i}`);
-        const result = document.getElementById(`result-q${i}`);
-        let selected = false;
-
         options.forEach(option => {
           if (option.checked) {
-            selected = true;
-            if (option.value === "correct") {
-              result.textContent = "Correct!";
-              score++;
-            } else {
-              result.textContent = "Incorrect.";
-            }
+            const result = document.getElementById(`result-q${i}`);
+            result.textContent = option.value === "correct" ? "Correct!" : "Incorrect.";
           }
         });
-
-        if (!selected) {
-          result.textContent = "Please select an answer.";
-        }
       }
-      alert(`You got ${score} out of 10 correct.`);
     }
 
     function checkMCQs() {
-      let score = 0;
       for (let i = 1; i <= 10; i++) {
         const options = document.getElementsByName(`m${i}`);
-        const result = document.getElementById(`result-m${i}`);
-        let selected = false;
-
         options.forEach(option => {
           if (option.checked) {
-            selected = true;
-            if (option.value === "correct") {
-              result.textContent = "Correct!";
-              score++;
-            } else {
-              result.textContent = "Incorrect.";
-            }
+            const result = document.getElementById(`result-m${i}`);
+            result.textContent = option.value === "correct" ? "Correct!" : "Incorrect.";
           }
         });
-
-        if (!selected) {
-          result.textContent = "Please select an answer.";
-        }
       }
-      alert(`You got ${score} out of 10 correct.`);
     }
   </script>
 
