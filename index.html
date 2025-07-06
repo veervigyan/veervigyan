@@ -10,9 +10,9 @@
       margin: 0;
       font-family: Arial, sans-serif;
       color: black;
-      background: linear-gradient(-45deg, #f3f4f6, #e3f2fd, #fff3e0, #e8f5e9, #fce4ec);
-      background-size: 500% 500%;
-      animation: softBackground 30s ease infinite;
+      background: linear-gradient(-45deg, #f3f4f6, #e3f2fd, #fff3e0, #e8f5e9, #fce4ec, #e0f7fa, #f1f8e9);
+      background-size: 600% 600%;
+      animation: softBackground 35s ease infinite;
       transition: background 1s;
     }
 
@@ -57,7 +57,7 @@
     section {
       display: none;
       padding: 2rem;
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.95);
       margin: 2rem auto;
       max-width: 900px;
       border-radius: 12px;
@@ -179,7 +179,6 @@
   <!-- QUIZ -->
   <section id="quiz" class="quiz">
     <h2>Quiz Section</h2>
-    <!-- Sample Questions -->
     <div class="question">
       <p>1. What is the boiling point of water?</p>
       <label><input type="radio" name="q1" value="wrong"> 90°C</label>
@@ -187,7 +186,15 @@
       <label><input type="radio" name="q1" value="wrong"> 120°C</label>
       <div class="result" id="result-q1"></div>
     </div>
-    <!-- (Add more questions here just like before) -->
+
+    <div class="question">
+      <p>2. Which planet is known as the Red Planet?</p>
+      <label><input type="radio" name="q2" value="wrong"> Earth</label>
+      <label><input type="radio" name="q2" value="correct"> Mars</label>
+      <label><input type="radio" name="q2" value="wrong"> Venus</label>
+      <div class="result" id="result-q2"></div>
+    </div>
+
     <button onclick="checkAnswers()">Submit Answers</button>
   </section>
 
@@ -201,7 +208,15 @@
       <label><input type="radio" name="m1" value="wrong"> Go</label>
       <div class="result" id="result-m1"></div>
     </div>
-    <!-- (Add more MCQs here just like before) -->
+
+    <div class="question">
+      <p>2. What is the largest ocean on Earth?</p>
+      <label><input type="radio" name="m2" value="correct"> Pacific Ocean</label>
+      <label><input type="radio" name="m2" value="wrong"> Atlantic Ocean</label>
+      <label><input type="radio" name="m2" value="wrong"> Indian Ocean</label>
+      <div class="result" id="result-m2"></div>
+    </div>
+
     <button onclick="checkMCQs()">Submit MCQs</button>
   </section>
 
