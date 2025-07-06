@@ -10,12 +10,12 @@
       margin: 0;
       font-family: Arial, sans-serif;
       color: white;
-      background: linear-gradient(-45deg, #e8f5e9, #c8e6c9, #ffffff, #a5d6a7);
-      background-size: 400% 400%;
-      animation: greenWhiteBG 30s ease infinite;
+      background: linear-gradient(270deg, #1d6123, #ffffff, #278e2b, #f0f0f0);
+      background-size: 600% 600%;
+      animation: gradientFlow 40s ease infinite;
     }
 
-    @keyframes greenWhiteBG {
+    @keyframes gradientFlow {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
@@ -29,6 +29,7 @@
       position: sticky;
       top: 0;
       z-index: 1000;
+      font-family: 'Cinzel Decorative', cursive;
     }
 
     nav::-webkit-scrollbar {
@@ -45,7 +46,6 @@
       border-radius: 8px;
       transition: background 0.3s;
       font-size: 1rem;
-      font-family: 'Cinzel Decorative', cursive;
     }
 
     nav a:hover {
@@ -67,10 +67,6 @@
 
     h1, h2 {
       text-align: center;
-    }
-
-    section h2 {
-      font-family: 'Cinzel Decorative', cursive;
     }
 
     .intro {
@@ -142,72 +138,55 @@
     </p>
   </section>
 
-  <!-- PDF -->
-  <section id="pdf">
-    <h2>PDF Section</h2>
-    <p>Helpful study PDFs will be available here soon!</p>
-  </section>
+  <!-- Other sections (PDF, Books, Classes, Test Series, Notes) remain the same -->
+  <section id="pdf"><h2>PDF Section</h2><p>Helpful study PDFs will be available here soon!</p></section>
+  <section id="books"><h2>Books Section</h2><p>Collection of important books for students. (Coming soon!)</p></section>
+  <section id="classes"><h2>Classes Section</h2><p>Watch lessons and video classes here. (Coming soon!)</p></section>
+  <section id="test"><h2>Test Series</h2><p>Practice tests and series coming soon!</p></section>
+  <section id="notes"><h2>Notes Section</h2><p>Important notes and summaries will be available here!</p></section>
 
-  <!-- BOOKS -->
-  <section id="books">
-    <h2>Books Section</h2>
-    <p>Collection of important books for students. (Coming soon!)</p>
-  </section>
-
-  <!-- CLASSES -->
-  <section id="classes">
-    <h2>Classes Section</h2>
-    <p>Watch lessons and video classes here. (Coming soon!)</p>
-  </section>
-
-  <!-- TEST SERIES -->
-  <section id="test">
-    <h2>Test Series</h2>
-    <p>Practice tests and series coming soon!</p>
-  </section>
-
-  <!-- NOTES -->
-  <section id="notes">
-    <h2>Notes Section</h2>
-    <p>Important notes and summaries will be available here!</p>
-  </section>
-
-  <!-- QUIZ -->
+  <!-- QUIZ (Science Only) -->
   <section id="quiz" class="quiz">
-    <h2>Quiz Section</h2>
-
-    <!-- 10 Quiz Questions -->
-    <!-- You already provided these; keeping them same -->
+    <h2>Science Quiz</h2>
 
     <div class="question">
-      <p>1. What is the boiling point of water?</p>
-      <label><input type="radio" name="q1" value="wrong"> 90°C</label>
-      <label><input type="radio" name="q1" value="correct"> 100°C</label>
-      <label><input type="radio" name="q1" value="wrong"> 120°C</label>
+      <p>1. What is the chemical formula of water?</p>
+      <label><input type="radio" name="q1" value="correct"> H₂O</label>
+      <label><input type="radio" name="q1" value="wrong"> CO₂</label>
+      <label><input type="radio" name="q1" value="wrong"> NaCl</label>
       <div class="result" id="result-q1"></div>
     </div>
 
-    <!-- (Add other 9 quiz questions here - skipped for brevity) -->
+    <div class="question">
+      <p>2. Which organelle is known as the powerhouse of the cell?</p>
+      <label><input type="radio" name="q2" value="correct"> Mitochondria</label>
+      <label><input type="radio" name="q2" value="wrong"> Nucleus</label>
+      <label><input type="radio" name="q2" value="wrong"> Ribosome</label>
+      <div class="result" id="result-q2"></div>
+    </div>
 
     <button onclick="checkAnswers()">Submit Answers</button>
   </section>
 
-  <!-- MCQs -->
+  <!-- MCQs (Science Only) -->
   <section id="mcqs" class="quiz">
-    <h2>MCQs Section</h2>
-
-    <!-- 10 MCQ Questions -->
-    <!-- You already provided these; keeping them same -->
+    <h2>Science MCQs</h2>
 
     <div class="question">
-      <p>1. What is the chemical symbol for Gold?</p>
-      <label><input type="radio" name="m1" value="correct"> Au</label>
-      <label><input type="radio" name="m1" value="wrong"> Ag</label>
-      <label><input type="radio" name="m1" value="wrong"> Go</label>
+      <p>1. Which gas is essential for respiration?</p>
+      <label><input type="radio" name="m1" value="correct"> Oxygen</label>
+      <label><input type="radio" name="m1" value="wrong"> Nitrogen</label>
+      <label><input type="radio" name="m1" value="wrong"> Carbon Dioxide</label>
       <div class="result" id="result-m1"></div>
     </div>
 
-    <!-- (Add other 9 MCQ questions here - skipped for brevity) -->
+    <div class="question">
+      <p>2. What is the boiling point of water at sea level?</p>
+      <label><input type="radio" name="m2" value="correct"> 100°C</label>
+      <label><input type="radio" name="m2" value="wrong"> 90°C</label>
+      <label><input type="radio" name="m2" value="wrong"> 80°C</label>
+      <div class="result" id="result-m2"></div>
+    </div>
 
     <button onclick="checkMCQs()">Submit MCQs</button>
   </section>
@@ -230,11 +209,7 @@
         options.forEach(option => {
           if (option.checked) {
             const result = document.getElementById(`result-q${i}`);
-            if (option.value === "correct") {
-              result.textContent = "Correct!";
-            } else {
-              result.textContent = "Incorrect.";
-            }
+            result.textContent = option.value === "correct" ? "Correct!" : "Incorrect.";
           }
         });
       }
@@ -246,11 +221,7 @@
         options.forEach(option => {
           if (option.checked) {
             const result = document.getElementById(`result-m${i}`);
-            if (option.value === "correct") {
-              result.textContent = "Correct!";
-            } else {
-              result.textContent = "Incorrect.";
-            }
+            result.textContent = option.value === "correct" ? "Correct!" : "Incorrect.";
           }
         });
       }
@@ -258,4 +229,4 @@
   </script>
 
 </body>
-  </html>
+</html>
