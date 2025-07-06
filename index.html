@@ -1,1 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Veer Vigyan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #000;
+      background: linear-gradient(120deg, #f5f7fa, #e0ecf8, #fdfbfb);
+      background-size: 300% 300%;
+      animation: softGlow 40s ease infinite;
+      transition: background 1s;
+    }
 
+    @keyframes softGlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    nav {
+      background: rgba(0, 0, 0, 0.85);
+      overflow-x: auto;
+      white-space: nowrap;
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav::-webkit-scrollbar {
+      display: none;
+    }
+
+    nav a {
+      display: inline-block;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 15px;
+      padding: 10px 15px;
+      border-radius: 8px;
+      transition: background 0.3s;
+      font-size: 1rem;
+    }
+
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    section {
+      display: none;
+      padding: 2rem;
+      background: white;
+      color: black;
+      margin: 2rem auto;
+      max-width: 900px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    section.active {
+      display: block;
+    }
+
+    h1, h2 {
+      text-align: center;
+    }
+
+    .intro {
+      font-family: 'Cinzel Decorative', cursive;
+      font-size: 1.3rem;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    .quiz, .question {
+      margin-top: 20px;
+    }
+
+    .question p {
+      font-weight: bold;
+    }
+
+    label {
+      display: block;
+      margin-left: 20px;
+    }
+
+    .result {
+      margin-top: 10px;
+      font-weight: bold;
+      color: green;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 8px 15px;
+      border: none;
+      background: #007bff;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        font-size: 0.9rem;
+        padding: 8px 10px;
+      }
+
+      .intro {
+        font-size: 1rem;
+        padding: 1rem;
+      }
+
+      section {
+        padding: 1rem;
+        margin: 1rem;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a onclick="showPage('home')">Home</a>
+    <a onclick="showPage('pdf')">PDF</a>
+    <a onclick="showPage('books')">Books</a>
+    <a onclick="showPage('classes')">Classes</a>
+    <a onclick="showPage('test')">Test Series</a>
+    <a onclick="showPage('notes')">Notes</a>
+    <a onclick="showPage('quiz')">Quiz</a>
+    <a onclick="showPage('mcqs')">MCQs</a>
+  </nav>
+
+  <section id="home" class="active">
+    <h1>Welcome to Veer Vigyan</h1>
+    <p class="intro">
+      This website is created by <strong>Veer Yaduveer</strong>, a passionate learner who believes that every student deserves access to free, joyful learning. <br><br>
+      Veer Vigyan is not just a website — it's a mission to spread science knowledge everywhere. Here you’ll get free PDFs, important books, test series, notes, and quizzes to sharpen your brain. <br><br>
+      Join the journey of making learning powerful, joyful, and for everyone!
+    </p>
+  </section>
+
+  <section id="pdf">
+    <h2>PDF Section</h2>
+    <p>Helpful study PDFs will be available here soon!</p>
+  </section>
+
+  <section id="books">
+    <h2>Books Section</h2>
+    <p>Collection of important books for students. (Coming soon!)</p>
+  </section>
+
+  <section id="classes">
+    <h2>Classes Section</h2>
+    <p>Watch lessons and video classes here. (Coming soon!)</p>
+  </section>
+
+  <section id="test">
+    <h2>Test Series</h2>
+    <p>Practice tests and series coming soon!</p>
+  </section>
+
+  <section id="notes">
+    <h2>Notes Section</h2>
+    <p>Important notes and summaries will be available here!</p>
+  </section>
+
+  <section id="quiz" class="quiz">
+    <h2>Quiz Section</h2>
+
+    <!-- 10 Quiz Questions (same as before) -->
+    <!-- Keep your previous quiz questions code here (no changes needed) -->
+
+    <button onclick="checkAnswers()">Submit Answers</button>
+  </section>
+
+  <section id="mcqs" class="quiz">
+    <h2>MCQs Section</h2>
+
+    <!-- 10 MCQ Questions (same as before) -->
+    <!-- Keep your previous MCQ questions code here (no changes needed) -->
+
+    <button onclick="checkMCQs()">Submit MCQs</button>
+  </section>
+
+  <footer>
+    &copy; 2025 Veer Vigyan. All rights reserved.
+  </footer>
+
+  <script>
+    function showPage(pageId) {
+      document.querySelectorAll('section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(pageId).classList.add('active');
+    }
+
+    function checkAnswers() {
+      let score = 0;
+      for (let i = 1; i <= 10; i++) {
+        const options = document.getElementsByName(`q${i}`);
+        const result = document.getElementById(`result-q${i}`);
+        let selected = false;
+
+        options.forEach(option => {
+          if (option.checked) {
+            selected = true;
+            if (option.value === "correct") {
+              result.textContent = "Correct!";
+              score++;
+            } else {
+              result.textContent = "Incorrect.";
+            }
+          }
+        });
+
+        if (!selected) {
+          result.textContent = "Please select an answer.";
+        }
+      }
+      alert(`You got ${score} out of 10 correct.`);
+    }
+
+    function checkMCQs() {
+      let score = 0;
+      for (let i = 1; i <= 10; i++) {
+        const options = document.getElementsByName(`m${i}`);
+        const result = document.getElementById(`result-m${i}`);
+        let selected = false;
+
+        options.forEach(option => {
+          if (option.checked) {
+            selected = true;
+            if (option.value === "correct") {
+              result.textContent = "Correct!";
+              score++;
+            } else {
+              result.textContent = "Incorrect.";
+            }
+          }
+        });
+
+        if (!selected) {
+          result.textContent = "Please select an answer.";
+        }
+      }
+      alert(`You got ${score} out of 10 correct.`);
+    }
+  </script>
+
+</body>
+                                                                   </html>
