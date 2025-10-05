@@ -1,0 +1,164 @@
+/* ==============================
+   Veer Vigyan Website CSS
+   Author: Veer
+   ============================== */
+
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap');
+
+/* 1. Body and Gradient Background */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif; /* main body text stays simple */
+    color: #333;
+    background: linear-gradient(-45deg, #b9fbc0, #ffffff, #b0e0e6, #ffffff);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+/* Gradient animation */
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* 2. Header and Navigation */
+header {
+    background-color: rgba(255, 255, 255, 0.85);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #2c3e50;
+    font-family: 'Cinzel Decorative', cursive; /* Updated font */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: bold;
+    font-family: 'Cinzel Decorative', cursive; /* Updated font */
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #27ae60;
+}
+
+/* 3. Section Styling */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    border-bottom: 2px solid #27ae60;
+    display: inline-block;
+    padding-bottom: 5px;
+    font-family: 'Cinzel Decorative', cursive; /* Headings use Cinzel */
+}
+
+section p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 10px auto 20px auto;
+}
+
+/* 4. Lists */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #1abc9c;
+    transition: 0.3s;
+    font-family: 'Arial', sans-serif; /* Keep links body style simple */
+}
+
+ul li a:hover {
+    color: #16a085;
+    text-decoration: underline;
+}
+
+/* 5. MCQ Buttons */
+button.option {
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    margin: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: 'Arial', sans-serif; /* Buttons text simple */
+}
+
+button.option:hover {
+    background-color: #2ecc71;
+    transform: scale(1.05);
+}
+
+/* 6. Footer */
+footer {
+    text-align: center;
+    padding: 25px 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #2c3e50;
+    font-weight: bold;
+    font-family: 'Cinzel Decorative', cursive; /* Footer uses Cinzel too */
+    box-shadow: 0 -4px 6px rgba(0,0,0,0.05);
+}
+
+/* 7. Responsive Design */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    section h2 {
+        font-size: 28px;
+    }
+
+    section p {
+        font-size: 16px;
+    }
+
+    button.option {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
