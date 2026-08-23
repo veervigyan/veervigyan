@@ -506,6 +506,165 @@
         { q: "The powerhouse of the cell is the…", a: ["Nucleus", "Ribosome", "Mitochondrion", "Golgi body"], c: 2 }
       ],
       quantum: [
-        { q: "A photon is the quantum of…", a: ["Charge", "Electromagnetic radiation", "Mass", "Gravity"], c: 1 },
-        { q: "Position and momentum cannot both be known exactly — this is the…", a: ["Pauli principle", "Heisenberg uncertainty principle", "Superposition law", "Photoelectric law"], c: 1 },
-        { 
+        { q: "A photon is the quantum ofâ€¦", a: ["Charge", "Electromagnetic radiation", "Mass", "Gravity"], c: 1 },
+        { q: "Position and momentum cannot both be known exactly â€” this is theâ€¦", a: ["Pauli principle", "Heisenberg uncertainty principle", "Superposition law", "Photoelectric law"], c: 1 },
+        { q: "The speed of light in vacuum is approximatelyâ€¦", a: ["3Ã—10â¶ m/s", "3Ã—10â¸ m/s", "3Ã—10Â¹â° m/s", "3Ã—10âµ m/s"], c: 1 }
+      ],
+      pioneers: [
+        { q: "Who won Nobel Prizes in two different sciences?", a: ["Isaac Newton", "Marie Curie", "Niels Bohr", "C.V. Raman"], c: 1 },
+        { q: "The general theory of relativity was proposed byâ€¦", a: ["Albert Einstein", "Max Planck", "Galileo Galilei", "Stephen Hawking"], c: 0 },
+        { q: "â€œOn the Origin of Speciesâ€ was written byâ€¦", a: ["Alfred Wallace", "Charles Darwin", "Thomas Huxley", "Gregor Mendel"], c: 1 }
+      ]
+    };
+    var stepEl = $("#qmStep"), qEl = $("#qmQ"), optsEl = $("#qmOpts"),
+        feedEl = $("#qmFeed"), barEl = $("#qmBar"), closeBtn = $("#qmClose");
+    var round = null, idx = 0, score = 0, lastFocus = null;
+
+    function open(id) {
+      round = QUIZ[id];
+      if (!round) return;
+      idx = 0; score = 0; lastFocus = doc.activeElement;
+      modal.hidden = false;
+      requestAnimationFrame(function () { modal.classList.add("show"); });
+      doc.body.classList.add("no-scroll");
+      render();
+      closeBtn.focus();
+    }
+    function close() {
+      modal.classList.remove("show");
+      modal.hidden = true;
+      doc.body.classList.remove("no-scroll");
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    }
+    function render() {
+      var q = round[idx];
+      stepEl.textContent = "Question " + (idx + 1) + " of " + round.length;
+      qEl.textContent = q.q;
+      optsEl.innerHTML = "";
+      feedEl.textContent = "";
+      barEl.style.width = (idx / round.length * 100) + "%";
+      q.a.forEach(function (o, i) {
+        var b = doc.createElement("button");
+        b.type = "button";
+        b.className = "qm-opt";
+        b.textContent = o;
+        b.addEventListener("click", function () { answer(b, i); });
+        optsEl.appendChild(b);
+      });
+    }
+    function answer(btn, i) {
+      var q = round[idx];
+      $$(".qm-opt", modal).forEach(function (b) { b.disabled = true; });
+      if (i === q.c) {
+        btn.classList.add("ok");
+        score++;
+        feedEl.textContent = "Correct â€” signal strengthened.";
+      } else {
+        btn.classList.add("no");
+        optsEl.children[q.c].classList.add("ok");
+        feedEl.textContent = "Recalibrated â€” the correct orbit is highlighted.";
+      }
+      barEl.style.width = ((idx + 1) / round.length * 100) + "%";
+      setTimeout(function () {
+        idx++;
+        if (idx < round.length) render(); else finish();
+      }, 1150);
+    }
+    function finish() {
+      stepEl.textContent = "Transmission received";
+      qEl.textContent = "Round complete â€” " + score + " / " + round.length;
+      optsEl.innerHTML = "";
+      feedEl.textContent = score === round.length
+        ? "Perfect orbit. Flawless recall."
+        : score >= Math.ceil(round.length * 0.6)
+          ? "Strong signal. Keep the streak alive."
+          : "Weak signal â€” revisit the notes and return.";
+      var again = doc.createElement("button");
+      again.type = "button"; again.className = "btn btn-neon sm"; again.textContent = "Replay round";
+      again.addEventListener("click", function () { idx = 0; score = 0; render(); });
+      var done = doc.createElement("button");
+      done.type = "button"; done.className = "btn btn-ghost sm"; done.textContent = "Close";
+      done.addEventListener("click", close);
+      optsEl.appendChild(again);
+      optsEl.appendChild(done);
+      barEl.style.width = "100%";
+    }
+    $$(".js-quiz").forEach(function (b) {
+      b.addEventListener("click", function () { open(b.getAttribute("data-quiz")); });
+    });
+    closeBtn.addEventListener("click", close);
+    modal.addEventListener("click", function (e) { if (e.target === modal) close(); });
+    doc.addEventListener("keydown", function (e) { if (e.key === "Escape" && !modal.hidden) close(); });
+  })();
+
+  /* ================= COUNTDOWNS ================= */
+  (function () {
+    var cd = $("#cd");
+    if (cd) {
+      var target = new Date("2026-09-15T09:00:00+05:30").getTime();
+      var dE = $("#cdD"), hE = $("#cdH"), mE = $("#cdM"), sE = $("#cdS");
+      function pad(n) { return (n < 10 ? "0" : "") + n; }
+      function tick() {
+        var diff = target - Date.now();
+        if (diff <= 0) {
+          dE.textContent = hE.textContent = mE.textContent = sE.textContent = "00";
+          $(".cd-title", cd).textContent = "Season 04 is live";
+          return;
+        }
+        var d = Math.floor(diff / 864e5); diff -= d * 864e5;
+        var h = Math.floor(diff / 36e5); diff -= h * 36e5;
+        var m = Math.floor(diff / 6e4); diff -= m * 6e4;
+        var s = Math.floor(diff / 1e3);
+        dE.textContent = pad(d); hE.textContent = pad(h);
+        mE.textContent = pad(m); sE.textContent = pad(s);
+        setTimeout(tick, 1000);
+      }
+      tick();
+    }
+    var daily = $("#dailyCd");
+    if (daily) {
+      function pad2(n) { return (n < 10 ? "0" : "") + n; }
+      function tick() {
+        var now = new Date();
+        var left = 86400 - (now.getHours() * 3600 + now.getMinutes() * 60 + now.getSeconds());
+        var h = Math.floor(left / 3600), m = Math.floor((left % 3600) / 60), s = left % 60;
+        daily.textContent = pad2(h) + ":" + pad2(m) + ":" + pad2(s);
+        setTimeout(tick, 1000);
+      }
+      tick();
+    }
+  })();
+
+  /* ================= SCROLL BUS ================= */
+  (function () {
+    var parEls = [];
+    if (FINE && !RM && !LOW) {
+      $$("[data-par]").forEach(function (el) {
+        parEls.push({ el: el, f: parseFloat(el.getAttribute("data-par")) || 0.05, top: 0 });
+      });
+      function measure() {
+        parEls.forEach(function (p) {
+          var r = p.el.getBoundingClientRect();
+          p.top = r.top + (window.scrollY || 0);
+        });
+      }
+      window.addEventListener("resize", measure, { passive: true });
+      measure();
+    }
+    var ticking = false;
+    function onScroll() {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(function () {
+        ticking = false;
+        var y = window.scrollY || 0;
+        if (navShell) navShell.classList.toggle("scrolled", y > 26);
+        for (var i = 0; i < parEls.length; i++) {
+          var p = parEls[i];
+          p.el.style.transform = "translate3d(0," + ((y - p.top) * p.f).toFixed(1) + "px,0)";
+        }
+      });
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  })();
