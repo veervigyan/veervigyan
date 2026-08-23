@@ -1,1 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VEER VIGYAN — Knowledge Beyond Boundaries | Futuristic Science Learning</title>
+<meta name="description" content="Veer Vigyan is a knowledge universe for science learners — curated notes, timed test series, sharp quizzes and a digital library orbiting one glowing core.">
+<link rel="canonical" href="https://veervigyan.com/">
+<meta name="theme-color" content="#04060c">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Veer Vigyan">
+<meta property="og:title" content="VEER VIGYAN — Knowledge Beyond Boundaries">
+<meta property="og:description" content="Notes, test series, quizzes and books in one cinematic knowledge universe.">
+<meta property="og:url" content="https://veervigyan.com/">
+<meta property="og:image" content="https://picsum.photos/seed/veer-vigyan-core/1200/630">
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><circle cx="16" cy="16" r="4.5" fill="%235fd9ff"/><circle cx="16" cy="16" r="11.5" fill="none" stroke="%235fd9ff" stroke-opacity=".4"/></svg>'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Veer Vigyan","slogan":"Knowledge Beyond Boundaries","url":"https://veervigyan.com/","description":"A futuristic educational universe of notes, test series, quizzes and books."}</script>
+<noscript><style>.reveal,.tcard,.mask-line{opacity:1!important;transform:none!important;filter:none!important}.loader{display:none}</style></noscript>
+</head>
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+<canvas class="stars" id="stars" aria-hidden="true"></canvas>
+<div class="noise" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
 
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-core"><span class="loader-ring"></span><span class="loader-ring r2"></span><span class="loader-dot"></span></div>
+  <p class="loader-word"><span>V</span><span>E</span><span>E</span><span>R</span><span class="sp"></span><span>V</span><span>I</span><span>G</span><span>Y</span><span>A</span><span>N</span></p>
+  <p class="loader-sub">Knowledge Beyond Boundaries</p>
+</div>
+
+<header class="nav-shell">
+  <nav class="nav" aria-label="Primary">
+    <a class="brand" href="index.html" aria-label="Veer Vigyan — home">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-name">VEER<em>VIGYAN</em></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu">
+      <span class="nt-line" aria-hidden="true"></span><span class="nt-line" aria-hidden="true"></span><span class="nt-line" aria-hidden="true"></span>
+    </button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+      <li><a href="index-2.html">Notes</a></li>
+      <li><a href="index-3.html">Test Series</a></li>
+      <li><a href="index-4.html">Quiz</a></li>
+      <li><a href="index-5.html">Books</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section class="hero" aria-label="Welcome to Veer Vigyan">
+    <p class="hero-side" aria-hidden="true">EST. 2026 · ORBITAL LEARNING SYSTEM</p>
+    <div class="hero-grid container">
+      <div class="hero-copy">
+        <p class="eyebrow" data-scramble>An orbital academy of science</p>
+        <h1 class="hero-title mask-grp">
+          <span class="mask"><span class="mask-line">VEER</span></span>
+          <span class="mask"><span class="mask-line alt" style="--d:.14s">VI<em>GYAN</em></span></span>
+        </h1>
+        <p class="hero-tag mask-grp"><span class="mask"><span class="mask-line" style="--d:.3s">Knowledge <em>Beyond</em> Boundaries.</span></span></p>
+        <p class="hero-intro reveal" style="--d:.45s">Veer Vigyan is a knowledge universe for the curious — curated notes, timed test series, sharp quizzes and great books orbiting one glowing core of understanding. No noise. No clutter. Only the clean pull of learning.</p>
+        <div class="hero-cta reveal" style="--d:.58s">
+          <a class="btn btn-neon" href="index-2.html">Explore Knowledge</a>
+          <a class="btn btn-ghost" href="index-3.html">Start Learning</a>
+        </div>
+        <dl class="hero-data reveal" style="--d:.7s">
+          <div><dt>Note decks</dt><dd>120+</dd></div>
+          <div><dt>Live tests</dt><dd>48</dd></div>
+          <div><dt>Quiz rounds</dt><dd>640</dd></div>
+          <div><dt>Books</dt><dd>75</dd></div>
+        </dl>
+      </div>
+      <div class="hero-core" id="heroCore">
+        <canvas id="coreCanvas" aria-hidden="true"></canvas>
+        <span class="chip chip-a glass reveal" style="--d:.8s">Ψ · Quantum notes</span>
+        <span class="chip chip-b glass reveal" style="--d:.95s">∫ · Calculus arena</span>
+        <span class="chip chip-c glass reveal" style="--d:1.1s">✦ · Weekly quiz orbit</span>
+        <p class="core-caption">The Knowledge Core — live render</p>
+      </div>
+    </div>
+    <a class="scroll-cue" href="#observatory" aria-label="Scroll to the introduction"><span class="scroll-line" aria-hidden="true"></span>Descend</a>
+  </section>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>Physics</span><i>✦</i><span>Chemistry</span><i>✦</i><span>Mathematics</span><i>✦</i><span>Biology</span><i>✦</i><span>Astronomy</span><i>✦</i><span>General Science</span><i>✦</i><span>Knowledge Beyond Boundaries</span><i>✦</i>
+      <span>Physics</span><i>✦</i><span>Chemistry</span><i>✦</i><span>Mathematics</span><i>✦</i><span>Biology</span><i>✦</i><span>Astronomy</span><i>✦</i><span>General Science</span><i>✦</i><span>Knowledge Beyond Boundaries</span><i>✦</i>
+    </div>
+  </div>
+
+  <section class="section observatory" id="observatory">
+    <div class="obs-grid container">
+      <div class="obs-left">
+        <p class="eyebrow" data-scramble>01 · The Observatory</p>
+        <h2 class="sec-title reveal">What is <em>Veer&nbsp;Vigyan</em>?</h2>
+        <p class="obs-sub reveal" style="--d:.1s">A calm, cinematic space where every chapter, test and page holds a fixed orbit — easy to find, easy to return to.</p>
+        <figure class="obs-portrait kb reveal" style="--d:.18s">
+          <img src="https://picsum.photos/seed/veer-observatory-night/720/900" alt="A quiet night observatory glowing beneath a deep star field" loading="lazy" width="720" height="900">
+        </figure>
+      </div>
+      <div class="obs-right">
+        <p class="lead reveal">Veer Vigyan exists because science education deserves better than scattered files and noisy dashboards. We build structure around curiosity — so a learner can travel from first principle to final exam without losing momentum.</p>
+        <p class="reveal" style="--d:.08s">The word <strong>Vigyan</strong> means <em>knowledge that dispels darkness</em>. Our four instruments work as one constellation: read, practise, recall, and then read deeper.</p>
+        <ul class="obs-list">
+          <li class="reveal"><span class="obs-num" aria-hidden="true">N.01</span><div><h3>Notes that read like maps</h3><p>Chapter-wise decks distilled to definitions, derivations and solved patterns.</p></div></li>
+          <li class="reveal" style="--d:.07s"><span class="obs-num" aria-hidden="true">N.02</span><div><h3>Tests that build nerve</h3><p>Timed arenas with real exam pressure, scored honestly, reviewed deeply.</p></div></li>
+          <li class="reveal" style="--d:.14s"><span class="obs-num" aria-hidden="true">N.03</span><div><h3>Quizzes that stay playful</h3><p>Short daily rounds that keep recall sharp without burning you out.</p></div></li>
+          <li class="reveal" style="--d:.21s"><span class="obs-num" aria-hidden="true">N.04</span><div><h3>Books that give context</h3><p>A curated shelf where facts become stories and scientists become people.</p></div></li>
+        </ul>
+        <div class="stat-row">
+          <div class="stat reveal"><b data-count="120" data-suffix="+">0</b><span>Note decks</span></div>
+          <div class="stat reveal" style="--d:.07s"><b data-count="48">0</b><span>Test arenas</span></div>
+          <div class="stat reveal" style="--d:.14s"><b data-count="640" data-suffix="+">0</b><span>Quiz questions</span></div>
+          <div class="stat reveal" style="--d:.21s"><b data-count="75">0</b><span>Curated books</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section arenas" id="arenas" aria-label="The four arenas">
+    <div class="container">
+      <p class="eyebrow" data-scramble>02 · The Four Arenas</p>
+      <h2 class="sec-title reveal">Choose your <em>orbit</em></h2>
+      <p class="sec-sub reveal" style="--d:.08s">Four instruments, one gravity. Enter any arena and the others follow.</p>
+      <div class="arena-grid">
+        <article class="tcard reveal">
+          <a class="tcard-link" href="index-2.html" aria-label="Notes — the Knowledge Library">
+            <span class="tcard-glow" aria-hidden="true"></span>
+            <span class="tcard-inner">
+              <span class="tcard-top"><span class="tcard-num">01</span><span class="tcard-glyph">Ψ</span></span>
+              <h3 class="tcard-title">Notes</h3>
+              <p class="tcard-sub">The Knowledge Library</p>
+              <p class="tcard-desc">Chapter-wise decks across five disciplines — distilled, indexed, revision-ready.</p>
+              <span class="tcard-meta">120+ decks · 5 subjects</span>
+              <span class="tcard-cta">Enter library <span class="arr" aria-hidden="true">→</span></span>
+            </span>
+          </a>
+        </article>
+        <article class="tcard reveal" style="--d:.08s">
+          <a class="tcard-link" href="index-3.html" aria-label="Test Series — the Challenge Arena">
+            <span class="tcard-glow" aria-hidden="true"></span>
+            <span class="tcard-inner">
+              <span class="tcard-top"><span class="tcard-num">02</span><span class="tcard-glyph">Δ</span></span>
+              <h3 class="tcard-title">Test Series</h3>
+              <p class="tcard-sub">The Challenge Arena</p>
+              <p class="tcard-desc">Timed examinations with honest scoring and instant, section-wise telemetry.</p>
+              <span class="tcard-meta">48 arenas · 4 seasons</span>
+              <span class="tcard-cta">Enter arena <span class="arr" aria-hidden="true">→</span></span>
+            </span>
+          </a>
+        </article>
+        <article class="tcard reveal" style="--d:.16s">
+          <a class="tcard-link" href="index-4.html" aria-label="Quiz — the Intelligence Zone">
+            <span class="tcard-glow" aria-hidden="true"></span>
+            <span class="tcard-inner">
+              <span class="tcard-top"><span class="tcard-num">03</span><span class="tcard-glyph">✦</span></span>
+              <h3 class="tcard-title">Quiz</h3>
+              <p class="tcard-sub">The Intelligence Zone</p>
+              <p class="tcard-desc">Short, sharp recall rounds — playable right in the browser, streak by streak.</p>
+              <span class="tcard-meta">640 questions · daily signal</span>
+              <span class="tcard-cta">Enter zone <span class="arr" aria-hidden="true">→</span></span>
+            </span>
+          </a>
+        </article>
+        <article class="tcard reveal" style="--d:.24s">
+          <a class="tcard-link" href="index-5.html" aria-label="Books — the Digital Library">
+            <span class="tcard-glow" aria-hidden="true"></span>
+            <span class="tcard-inner">
+              <span class="tcard-top"><span class="tcard-num">04</span><span class="tcard-glyph">∞</span></span>
+              <h3 class="tcard-title">Books</h3>
+              <p class="tcard-sub">The Digital Library</p>
+              <p class="tcard-desc">A curated shelf where formulas become stories and scientists become people.</p>
+              <span class="tcard-meta">75 titles · 6 shelves</span>
+              <span class="tcard-cta">Enter library <span class="arr" aria-hidden="true">→</span></span>
+            </span>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section principle">
+    <div class="container center">
+      <p class="eyebrow" data-scramble>03 · The Principle</p>
+      <p class="principle-line mask-grp">
+        <span class="mask"><span class="mask-line">Facts orbit understanding.</span></span>
+        <span class="mask"><span class="mask-line dim" style="--d:.15s">Wonder keeps them in motion.</span></span>
+      </p>
+      <p class="principle-sub reveal">Every deck, arena, round and shelf on Veer Vigyan is engineered around one gravity — the learner. Master the core, and everything else stays in orbit.</p>
+      <a class="btn btn-neon reveal" style="--d:.15s" href="index-2.html">Begin the descent</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-main container">
+    <div class="footer-brand">
+      <p class="footer-logo">VEER VIGYAN</p>
+      <p class="footer-tag">Knowledge Beyond Boundaries.</p>
+      <p class="footer-note">Notes · Tests · Quizzes · Books — one orbit, one learner, no limits.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <h2 class="footer-h">Navigate</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index-2.html">Notes</a></li>
+        <li><a href="index-3.html">Test Series</a></li>
+        <li><a href="index-4.html">Quiz</a></li>
+        <li><a href="index-5.html">Books</a></li>
+      </ul>
+    </nav>
+    <div class="footer-meta">
+      <h2 class="footer-h">Signal</h2>
+      <p>hello@veervigyan.com</p>
+      <p>Mon–Sat · 09:00–19:00 IST</p>
+      <p>Orbiting since 2026</p>
+    </div>
+  </div>
+  <div class="footer-base container">
+    <p>© 2026 Veer Vigyan. Crafted for curious minds.</p>
+    <a class="top-link" href="#top">Return to orbit ↑</a>
+    
+<title>Notes — The Knowledge Library | VEER VIGYAN</title>
+<meta name="description" content="Chapter-wise study decks in Physics, Chemistry, Mathematics, Biology and General Science — definitions, derivations and solved patterns, revision-ready.">
+<link rel="canonical" href="https://veervigyan.com/index-2.html">
+<meta name="theme-color" content="#04060c">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Notes — The Knowledge Library | Veer Vigyan">
+<meta property="og:description" content="Chapter-wise study decks across five disciplines, engineered for deep recall.">
+<meta property="og:url" content="https://veervigyan.com/index-2.html">
+<meta property="og:image" content="https://picsum.photos/seed/veer-notes-library/1200/630">
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><circle cx="16" cy="16" r="4.5" fill="%235fd9ff"/><circle cx="16" cy="16" r="11.5" fill="none" stroke="%235fd9ff" stroke-opacity=".4"/></svg>'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Notes — The Knowledge Library","url":"https://veervigyan.com/index-2.html","isPartOf":{"@type":"WebSite","name":"Veer Vigyan"}}</script>
+<noscript><style>.reveal,.tcard,.mask-line{opacity:1!important;transform:none!important;filter:none!important}.loader{display:none}.hide{display:none!important}</style></noscript>
+</head>
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+<canvas class="stars" id="stars" aria-hidden="true"></canvas>
+<div class="noise" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+
+<header class="nav-shell">
+  <nav class="nav" aria-label="Primary">
+    <a class="brand" href="index.html" aria-label="Veer Vigyan — home">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-name">VEER<em>VIGYAN</em></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu">
+      <span class="nt-line" aria-hidden="true"></span><span class="nt-line" aria-hidden="true"></span><span class="nt-line" aria-hidden="true"></span>
+    </button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index-2.html" class="active" aria-current="page">Notes</a></li>
+      <li><a href="index-3.html">Test Series</a></li>
+      <li><a href="index-4.html">Quiz</a></li>
+      <li><a href="index-5.html">Books</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="orb-mark" aria-hidden="true"><i></i><i></i><b></b></div>
+    <div class="container">
+      <p class="eyebrow" data-scramble>Section 02 · Study Decks</p>
+      <h1 class="ph-title mask-grp"><span class="mask"><span class="mask-line">The Knowledge <em>Library</em></span></span></h1>
+      <p class="ph-sub reveal">Chapter-wise notes engineered for deep recall — definitions, derivations, diagrams and solved patterns, one orbit at a time.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-label="Notes collection">
+    <div class="container">
+      <div class="filters" role="group" aria-label="Filter notes by subject">
+        <button class="chip-btn active" type="button" data-filter="all">All decks</button>
+        <button class="chip-btn" type="button" data-filter="physics">Physics</button>
+        <button class="chip-btn" type="button" data-filter="chemistry">Chemistry</button>
+        <button class="chip-btn" type="button" data-filter="mathematics">Mathematics</button>
+        <button class="chip-btn" type="button" data-filter="biology">Biology</button>
+        <button class="chip-btn" type="button" data-filter="general">General Science</button>
+      </div>
+      <p class="filter-count" id="filterCount" aria-live="polite">Showing 9 of 9 decks</p>
+
+      <div class="cards-grid">
+        <article class="tcard ncard reveal" data-subject="physics">
+          <span class="tcard-glow" aria-hidden="true"></span>
+          <div class="tcard-inner">
+            <div class="tcard-top"><span class="badge">Physics</span><span class="tcard-glyph">Ψ</span></div>
+            <h3 class="tcard-title">Laws of Motion</h3>
+            <p class="tcard-meta">Chapter 04 · Class 11 · 42 pages</p>
+            <p class="tcard-desc">Inertia, momentum and friction — every law derived, drawn and drilled with exam-grade problems.</p>
+            <div class="diff" aria-label="Difficulty: intermediate"><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><em>Intermediate</em></div>
+            <button class="btn btn-ghost sm" type="button">Explore notes</button>
+          </div>
+        </article>
+        <article class="tcard ncard reveal" style="--d:.06s" data-subject="physics">
+          <span class="tcard-glow" aria-hidden="true"></span>
+          <div class="tcard-inner">
+            <div class="tcard-top"><span class="badge">Physics</span><span class="tcard-glyph">λ</span></div>
+            <h3 class="tcard-title">Wave Optics &amp; Interference</h3>
+            <p class="tcard-meta">Chapter 10 · Class 12 · 38 pages</p>
+            <p class="tcard-desc">Huygens, Young and the geometry of fringes — path differences made permanently visual.</p>
+            <div class="diff" aria-label="Difficulty: advanced"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><em>Advanced</em></div>
+            <button class="btn btn-ghost sm" type="button">Explore notes</button>
+          </div>
+        </article>
+        <article class="tcard ncard reveal" style="--d:.12s" data-subject="chemistry">
+          <span class="tcard-glow" aria-hidden="true"></span>
+          <div class="tcard-inner">
+            <div class="tcard-top"><span class="badge">Chemistry</span><span class="tcard-glyph">Δ</span></div>
+            <h3 class="tcard-title">Chemical Bonding</h3>
+            <p class="tcard-meta">Chapter 04 · Class 11 · 36 pages</p>
+            <p class="tcard-desc">From Lewis dots to hybrid orbitals — why atoms hold hands, mapped in one clean deck.</p>
+            <div class="diff" aria-label="Difficulty: intermediate"><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><em>Intermediate</em></div>
+            <button class="btn btn-ghost sm" type="button">Explore notes</button>
+          </div>
+        </article>
+        <article class="tcard ncard reveal" data-subject="chemistry">
+          <span class="tcard-glow" aria-hidden="true"></span>
+          <div class="tcard-inner">
+            <div class="tcard-top"><span class="badge">Chemistry</span><span class="tcard-glyph">Σ</span></div>
+            <h3 class="tcard-title">Organic Reaction Map</h3>
+            <p class="tcard-meta">Chapter 12 · Class 12 · 54 pages</p>
+            <p class="tcard-desc">Name reactions as a connected network — mechanisms, markers and the fastest routes between them.</p>
+            <div class="diff" aria-label="Difficulty: advanced"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><em>Advanced</em></div>
+            <button class="btn btn-ghost sm" type="button">Explore notes</button>
+          </div>
+        </article>
+        <article class="tcard ncard reveal" style="--d:.06s" data-subject="mathematics">
+          <span class="tcard-glow" aria-hidden="true"></span>
+          <div class="tcard-inner">
+            <div class="tcard-top"><span class="badge">Mathematics</span><span class="tcard-glyph">∫</span></div>
+            <h3 class="tcard-title">Limits &amp; Continuity</h3>
+            <p class="tcard-meta">Chapter 02 · Class 12 · 40 pages</p>
+            <p class="tcard-desc">The doorway to calculus — standard forms, squeezes and the traps examiners love.</p>
+            <div class="diff" aria-label="Difficulty: intermediate"><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><em>Intermediate</em></div>
+            <button class="btn btn-ghost sm" type="button">Explore notes</button>
+          </div>
+        </article>
+        <article class="tcard ncard reveal" style="--d:.12s" data-subject="mathematics">
+          <span class="tcard-glow" aria-hidden="true"></span>
+          <div class="tcard-inner">
+            <div class="tcard-top"><span class="badge">Mathematics</span><span class="tcard-glyph">∞</span></div>
+            <h3 class="tcard-title">Vectors &amp; 3D Geometry</h3>
+            <p class="tcard-meta">Chapter 09 · Class 12 · 33 pages</p>
+            <p class="tcard-desc">Lines, planes and angles in space — spatial intuition built from first principles.</p>
+            <div class="diff" aria-label="Difficulty: intermediate"><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><em>Intermediate</em></div>
+            <button class="btn btn-ghost sm" type="button">Explore notes</button>
+          </div>
+        </article>
+        <article class="tcard ncard reveal" data-subject="biology">
+          <span class="tcard-glow" aria-hidden="true"></span>
+          <div class="tcard-inner">
+            <div class="tcard-top"><span class="badge">Biology</span><span class="tcard-glyph">φ</span></div>
+            <h3 class="tcard-title">Cell — The Unit of Life</h3>
+            <p class="tcard-meta">Chapter 08 · Class 11 · 29 pages</p>
+            <p class="tcard-desc">Organelles as a working city — structure, function and the diagrams that win marks.</p>
+            <div class="diff" aria-label="Difficulty: beginner"><span class="dot on"></span><span class="dot"></span><span class="dot"></span><em>Beginner</em></div>
+            <button class="btn btn-ghost sm" type="button">Explore notes</button>
+          </div>
+        </article>
+        <article class="tcard ncard reveal" style="--d:.06s" data-subject="biology">
+          <span class="tcard-glow" aria-hidden="true"></span>
+          <div class="tcard-inner">
+            <div class="tcard-top"><span class="badge">Biology</span><span class="tcard-glyph">Ω</span></div>
+            <h3 class="tcard-title">Genetics &amp; Inheritance</h3>
+            <p class="tcard-meta">Chapter 05 · Class 12 · 47 pages</p>
+            <p class="tcard-desc">Mendel to Morgan — crosses, pedigrees and probability, solved pattern by pattern.</p>
+            <div class="diff" aria-label="Difficulty: advanced"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><em>Advanced</em></div>
+            <button class="btn btn-ghost sm" type="button">Explore notes</button>
+          </div>
+        </article>
+        <article class="tcard ncard reveal" style="--d:.12s" data-subject="general">
+          <span class="tcard-glow" aria-hidden="true"></span>
+          <div class="tcard-inner">
+            <div class="tcard-top"><span class="badge">General Science</span><span class="tcard-glyph">π</span></div>
+            <h3 class="tcard-title">Everyday Force &amp; Energy</h3>
+            <p class="tcard-meta">Unit 02 · Class 9 · 24 pages</p>
+            <p class="tcard-desc">The physics of brakes, kettles and cricket balls — foundations for every future engineer.</p>
+            <div class="diff" aria-label="Difficulty: beginner"><span class="dot on"></span><span class="dot"></span><span class="dot"></span><em>Beginner</em></div>
+            <button class="btn btn-ghost sm" type="button">Explore notes</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cross-cta">
+    <div class="container glass-band reveal">
+      <p class="band-kicker">Next orbit</p>
+      <h2 class="band-title">Reading is fuel. <em>Pressure</em> is the test.</h2>
+      <a class="btn btn-neon" href="index-3.html">Enter the Challenge Arena</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-main container">
+    <div class="footer-brand">
+      <p class="footer-logo">VEER VIGYAN</p>
+      <p class="footer-tag">Knowledge Beyond Boundaries.</p>
+      <p class="footer-note">Notes · Tests · Quizzes · Books — one orbit, one learner, no limits.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <h2 class="footer-h">Navigate</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index-2.html">Notes</a></li>
+        <li><a href="index-3.html">Test Series</a></li>
+        <li><a href="index-4.html">Quiz</a></li>
+        <li><a href="index-5.html">Books</a></li>
+      </ul>
+    </nav>
+    <div class="footer-meta">
+      <h2 class="footer-h">Signal</h2>
+      <p>hello@veervigyan.com</p>
+      <p>Mon–Sat · 09:00–19:00 IST</p>
+      <p>Orbiting since 2026</p>
+    </div>
+  </div>
+  <div class="footer-base container">
+    <p>© 2026 Veer Vigyan. Crafted for curious minds.</p>
+    <a class="top-link" href="#top">Return to orbit ↑</a>
+  
+<title>Test Series — The Challenge Arena | VEER VIGYAN</title>
+<meta name="description" content="Timed examination arenas — sprints, marathons and the Grand Orbital Mock, with honest scoring and instant section-wise analytics.">
+<link rel="canonical" href="https://veervigyan.com/index-3.html">
+<meta name="theme-color" content="#04060c">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Test Series — The Challenge Arena | Veer Vigyan">
+<meta property="og:description" content="Timed tests with honest scoring and instant telemetry.">
+<meta property="og:url" content="https://veervigyan.com/index-3.html">
+<meta property="og:image" content="https://picsum.photos/seed/veer-challenge-arena/1200/630">
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><circle cx="16" cy="16" r="4.5" fill="%235fd9ff"/><circle cx="16" cy="16" r="11.5" fill="none" stroke="%235fd9ff" stroke-opacity=".4"/></svg>'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Test Series — The Challenge Arena","url":"https://veervigyan.com/index-3.html","isPartOf":{"@type":"WebSite","name":"Veer Vigyan"}}</script>
+<noscript><style>.reveal,.tcard,.mask-line{opacity:1!important;transform:none!important;filter:none!important}.loader{display:none}</style></noscript>
+</head>
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+<canvas class="stars" id="stars" aria-hidden="true"></canvas>
+<div class="noise" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+
+<header class="nav-shell">
+  <nav class="nav" aria-label="Primary">
+    <a class="brand" href="index.html" aria-label="Veer Vigyan — home">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-name">VEER<em>VIGYAN</em></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu">
+      <span class="nt-line" aria-hidden="true"></span><span class="nt-line" aria-hidden="true"></span><span class="nt-line" aria-hidden="true"></span>
+    </button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index-2.html">Notes</a></li>
+      <li><a href="index-3.html" class="active" aria-current="page">Test Series</a></li>
+      <li><a href="index-4.html">Quiz</a></li>
+      <li><a href="index-5.html">Books</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="orb-mark" aria-hidden="true"><i></i><i></i><b></b></div>
+    <div class="container">
+      <p class="eyebrow" data-scramble>Section 03 · Timed Arenas</p>
+      <h1 class="ph-title mask-grp"><span class="mask"><span class="mask-line">The Challenge <em>Arena</em></span></span></h1>
+      <p class="ph-sub reveal">Examinations engineered like missions — fixed windows, honest scoring, and telemetry that tells you exactly where your orbit wobbles.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-label="Arena schedule">
+    <div class="container">
+      <div class="cd-banner glass reveal" id="cd">
+        <div class="cd-text">
+          <p class="cd-kicker">Season 04 · Ranked window</p>
+          <h2 class="cd-title">The arena opens in</h2>
+        </div>
+        <div class="cd-timer" role="timer" aria-label="Countdown to Season 04">
+          <span class="cd-cell"><b id="cdD">00</b><i>days</i></span>
+          <span class="cd-cell"><b id="cdH">00</b><i>hours</i></span>
+          <span class="cd-cell"><b id="cdM">00</b><i>min</i></span>
+          <span class="cd-cell"><b id="cdS">00</b><i>sec</i></span>
+        </div>
+      </div>
+
+      <article class="tcard featured-test reveal">
+        <span class="tcard-glow" aria-hidden="true"></span>
+        <div class="tcard-inner ft-inner">
+          <div class="ft-left">
+            <span class="badge badge-hot">Featured · Ranked</span>
+            <h3 class="tcard-title big">The Grand Orbital Mock</h3>
+            <p class="tcard-desc">Full-syllabus simulation with live percentile ranks. The closest thing to exam day — minus the trembling hands.</p>
+            <ul class="spec spec-wide">
+              <li><span>Questions</span><b>120</b></li>
+              <li><span>Duration</span><b>180 min</b></li>
+              <li><span>Subjects</span><b>All four</b></li>
+              <li><span>Window</span><b>Sat–Sun</b></li>
+            </ul>
+          </div>
+          <div class="ft-right">
+            <p class="ft-price">Free entry · Season 04</p>
+            <button class="btn btn-neon" type="button">Start Test</button>
+          </div>
+        </div>
+      </article>
+
+      <div class="cards-grid">
+        <article class="tcard reveal">
+          <span class="tcard-glow" aria-hidden="true"></span>
+          <div class="tcard-inner">
+            <div class="tcard-top"><span class="badge">Physics</span><span class="tcard-num">T-01</span></div>
+            <h3 class="tcard-title">Kinematics Sprint</h3>
+            <p class="tcard-desc">Motion in a line and projectile basics under a tight clock.</p>
+            <ul class="spec">
+              <li><span>Questions</span><b>25</b></li>
+              <li><span>Duration</span><b>30 min</b></li>
+              <li><span>Level</span><b>Intermediate</b></li>
+              <li><span>Attempts</span><b>2</b></li>
+            </ul>
+            <button class="btn btn-neon sm" type="button">Start Test</button>
+          </div>
+        </article>
+        <article class="tcard reveal" style="--d:.06s">
+          <span class="tcard-glow" aria-hidden="true"></span>
+          <div class="tcard-inner">
+            <div class="tcard-top"><span class="badge">Chemistry</span><span class="tcard-num">T-02</span></div>
+            <h3 class="tcard-title">Organic Gauntlet</h3>
+            <p class="tcard-desc">Reaction maps and mechanism traps across sixty minutes.</p>
+            <ul class="spec">
+              <li><span>Questions</span><b>40</b></li>
+              <li><span>Duration</span><b>60 min</b></li>
+              <li><span>Level</span><b>Advanced</b></li>
+              <li><span>Attempts</span><b>2</b></li>
+            </ul>
+            <button class="btn btn-neon sm" type="button">Start Test</button>
+          </div>
+        </article>
+        <article class="tcard reveal" style="--d:.12s">
+          <span class="tcard-glow" aria-hidden="true"></span>
+          <div class="tcard-inner">
+            <div class="tcard-top"><span class="badge">Mathematics</span><span class="tcard-num">T-03</span></div>
+            <h3 class="tcard-title">Calculus Marathon</h3>
+            <p class="tcard-desc">Limits to integrals — an endurance run for serious solvers.</p>
+            <ul class="spec">
+              <li><span>Questions</span><b>50</b></li>
+              <li><span>Duration</span><b>90 min</b></li>
+              <li><span>Level</span><b>Advanced</b></li>
+              <li><span>Attempts</span><b>1</b></li>
+            </ul>
+            <button class="btn btn-neon sm" type="button">Start Test</button>
+          </div>
+        </article>
+        <article class="tcard reveal">
+          <span class="tcard-glow" aria-hidden="true"></span>
+          <div class="tcard-inner">
+            <div class="tcard-top"><span class="badge">Biology</span><span class="tcard-num">T-04</span></div>
+            <h3 class="tcard-title">Cell Foundations</h3>
+            <p class="tcard-desc">A gentle first descent into cytology for new cadets.</p>
+            <ul class="spec">
+              <li><span>Questions</span><b>30</b></li>
+              <li><span>Duration</span><b>45 min</b></li>
+              <li><span>Level</span><b>Beginner</b></li>
+              <li><span>Attempts</span><b>3</b></li>
+            </ul>
+            <button class="btn btn-neon sm" type="button">Start Test</button>
+          </div>
+        </article>
+        <article class="tcard reveal" style="--d:.06s">
+          <span class="tcard-glow" aria-hidden="true"></span>
+          <div class="tcard-inner">
+            <div class="tcard-top"><span class="badge">Physics · Chem</span><span class="tcard-num">T-05</span></div>
+            <h3 class="tcard-title">Thermodynamics Duel</h3>
+            <p class="tcard-desc">Heat, work and entropy — where two disciplines collide.</p>
+            <ul class="spec">
+              <li><span>Questions</span><b>35</b></li>
+              <li><span>Duration</span><b>50 min</b></li>
+              <li><span>Level</span><b>Advanced</b></li>
+              <li><span>Attempts</span><b>2</b></li>
+            </ul>
+            <button class="btn btn-neon sm" type="button">Start Test</button>
+          </div>
+        </article>
+        <article class="tcard reveal" style="--d:.12s">
+          <span class="tcard-glow" aria-hidden="true"></span>
+          <div class="tcard-inner">
+            <div class="tcard-top"><span class="badge">Mixed</span><span class="tcard-num">T-06</span></div>
+            <h3 class="tcard-title">General Science Grand Test</h3>
+            <p class="tcard-desc">Every discipline, one paper — the classic weekly checkpoint.</p>
+            <ul class="spec">
+              <li><span>Questions</span><b>60</b></li>
+              <li><span>Duration</span><b>90 min</b></li>
+              <li><span>Level</span><b>Intermediate</b></li>
+              <li><span>Attempts</span><b>2</b></li>
+            </ul>
+            <button class="btn btn-neon sm" type="button">Start Test</button>
+          </div>
+        </article>
+      </div>
+
+      <ul class="protocol">
+        <li class="reveal"><b>01</b><span>Ranked mode carries −¼ negative marking. Practice mode is fearless.</span></li>
+        <li class="reveal" style="--d:.08s"><b>02</b><span>Section-wise telemetry lands within seconds of submission.</span></li>
+        <li class="reveal" style="--d:.16s"><b>03</b><span>Every arena re-opens on request — repetition is how orbits stabilise.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section cross-cta">
+    <div class="container glass-band reveal">
+      <p class="band-kicker">Next orbit</p>
+      <h2 class="band-title">Recovered? <em>Sharpen</em> the recall.</h2>
+      <a class="btn btn-neon" href="index-4.html">Enter the Intelligence Zone</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-main container">
+    <div class="footer-brand">
+      <p class="footer-logo">VEER VIGYAN</p>
+      <p class="footer-tag">Knowledge Beyond Boundaries.</p>
+      <p class="footer-note">Notes · Tests · Quizzes · Books — one orbit, one learner, no limits.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <h2 class="footer-h">Navigate</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index-2.html">Notes</a></li>
+        <li><a href="index-3.html">Test Series</a></li>
+        <li><a href="index-4.html">Quiz</a></li>
+        <li><a href="index-5.html">Books</a></li>
+      </ul>
+    </nav>
+    <div class="footer-meta">
+      <h2 class="footer-h">Signal</h2>
+      <p>hello@veervigyan.com</p>
+      <p>Mon–Sat · 09:00–19:00 IST</p>
+      <p>Orbiting since 2026</p>
+    </div>
+  </div>
+  <div class="footer-base container">
+    <p>© 2026 Veer Vigyan. Crafted for curious minds.</p>
+    <a class="top-link" href="#top">Return to orbit ↑</a>
+
+<title>Quiz — The Intelligence Zone | VEER VIGYAN</title>
+<meta name="description" content="Interactive science quizzes — playable daily rounds across astronomy, mathematics, chemistry, biology and physics. Answer, score, keep the streak.">
+<link rel="canonical" href="https://veervigyan.com/index-4.html">
+<meta name="theme-color" content="#04060c">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Quiz — The Intelligence Zone | Veer Vigyan">
+<meta property="og:description" content="Short, sharp, playable knowledge rounds. Keep the streak alive.">
+<meta property="og:url" content="https://veervigyan.com/index-4.html">
+<meta property="og:image" content="https://picsum.photos/seed/veer-intelligence-zone/1200/630">
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><circle cx="16" cy="16" r="4.5" fill="%235fd9ff"/><circle cx="16" cy="16" r="11.5" fill="none" stroke="%235fd9ff" stroke-opacity=".4"/></svg>'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Quiz — The Intelligence Zone","url":"https://veervigyan.com/index-4.html","isPartOf":{"@type":"WebSite","name":"Veer Vigyan"}}</script>
+<noscript><style>.reveal,.tcard,.mask-line{opacity:1!important;transform:none!important;filter:none!important}.loader{display:none}</style></noscript>
+</head>
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+<canvas class="stars" id="stars" aria-hidden="true"></canvas>
+<div class="noise" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+
+<header class="nav-shell">
+  <nav class="nav" aria-label="Primary">
+    <a class="brand" href="index.html" aria-label="Veer Vigyan — home">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-name">VEER<em>VIGYAN</em></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu">
+      <span class="nt-line" aria-hidden="true"></span><span class="nt-line" aria-hidden="true"></span><span class="nt-line" aria-hidden="true"></span>
+    </button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index-2.html">Notes</a></li>
+      <li><a href="index-3.html">Test Series</a></li>
+      <li><a href="index-4.html" class="active" aria-current="page">Quiz</a></li>
+      <li><a href="index-5.html">Books</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="orb-mark" aria-hidden="true"><i></i><i></i><b></b></div>
+    <div class="container">
+      <p class="eyebrow" data-scramble>Section 04 · Recall Rounds</p>
+      <h1 class="ph-title mask-grp"><span class="mask"><span class="mask-line">The Intelligence <em>Zone</em></span></span></h1>
+      <p class="ph-sub reveal">Short rounds, fast feedback, zero fear. Quizzes keep memory warm the way stars keep planets in line — quietly, every day.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-label="Quiz rounds">
+    <div class="container">
+      <div class="daily glass reveal">
+        <div class="daily-left">
+          <p class="cd-kicker">Daily Signal</p>
+          <h2 class="cd-title">A fresh round every midnight</h2>
+          <p class="daily-note">Answer within 24 hours to keep your streak in orbit.</p>
+        </div>
+        <div class="daily-right">
+          <p class="daily-cd" id="dailyCd" role="timer" aria-label="Time until the next daily quiz">--:--:--</p>
+          <span class="streak-chip">Streak · 06 days</span>
+        </div>
+      </div>
+
+      <div class="cards-grid">
+        <article class="tcard qcard reveal">
+          <span class="tcard-glow" aria-hidden="true"></span>
+          <div class="tcard-inner">
+            <div class="tcard-top"><span class="badge">Astronomy</span><span class="tcard-glyph">✦</span></div>
+            <h3 class="tcard-title">Cosmic Trivia</h3>
+            <p class="tcard-desc">Moons, light-years and burning planets — the sky in ten moves.</p>
+            <p class="tcard-meta">10 questions · Beginner · ~4 min</p>
+            <button class="btn btn-neon sm js-quiz" type="button" data-quiz="cosmic">Start Quiz</button>
+          </div>
+        </article>
+        <article class="tcard qcard reveal" style="--d:.06s">
+          <span class="tcard-glow" aria-hidden="true"></span>
+          <div class="tcard-inner">
+            <div class="tcard-top"><span class="badge">Mathematics</span><span class="tcard-glyph">∫</span></div>
+            <h3 class="tcard-title">Equation Decoder</h3>
+            <p class="tcard-desc">Read the symbols, find the value, beat the clock.</p>
+            <p class="tcard-meta">12 questions · Intermediate · ~5 min</p>
+            <button class="btn btn-neon sm js-quiz" type="button" data-quiz="equation">Start Quiz</button>
+          </div>
+        </article>
+        <article class="tcard qcard reveal" style="--d:.12s">
+          <span class="tcard-glow" aria-hidden="true"></span>
+          <div class="tcard-inner">
+            <div class="tcard-top"><span class="badge">Chemistry</span><span class="tcard-glyph">Δ</span></div>
+            <h3 class="tcard-title">Element Enigma</h3>
+            <p class="tcard-desc">Symbols, numbers and the air around you — decoded.</p>
+            <p class="tcard-meta">10 questions · Intermediate · ~4 min</p>
+            <button class="btn btn-neon sm js-quiz" type="button" data-quiz="element">Start Quiz</button>
+          </div>
+        </article>
+        <article class="tcard qcard reveal">
+          <span class="tcard-glow" aria-hidden="true"></span>
+          <div class="tcard-inner">
+            <div class="tcard-top"><span class="badge">Biology</span><span class="tcard-glyph">φ</span></div>
+            <h3 class="tcard-title">Body Systems Blitz</h3>
+            <p class="tcard-desc">The machine you live in, ten questions at a time.</p>
+            <p class="tcard-meta">10 questions · Beginner · ~3 min</p>
+            <button class="btn btn-neon sm js-quiz" type="button" data-quiz="body">Start Quiz</button>
+          </div>
+        </article>
+        <article class="tcard qcard reveal" style="--d:.06s">
+          <span class="tcard-glow" aria-hidden="true"></span>
+          <div class="tcard-inner">
+            <div class="tcard-top"><span class="badge">Physics</span><span class="tcard-glyph">Ψ</span></div>
+            <h3 class="tcard-title">Quantum Quickfire</h3>
+            <p class="tcard-desc">Photons, uncertainty and the speed limit of the universe.</p>
+            <p class="tcard-meta">9 questions · Advanced · ~4 min</p>
+            <button class="btn btn-neon sm js-quiz" type="button" data-quiz="quantum">Start Quiz</button>
+          </div>
+        </article>
+        <article class="tcard qcard reveal" style="--d:.12s">
+          <span class="tcard-glow" aria-hidden="true"></span>
+          <div class="tcard-inner">
+            <div class="tcard-top"><span class="badge">History of Science</span><span class="tcard-glyph">Ω</span></div>
+            <h3 class="tcard-title">Science Pioneers</h3>
+            <p class="tcard-desc">The shoulders every formula stands on.</p>
+            <p class="tcard-meta">10 questions · All levels · ~4 min</p>
+            <button class="btn btn-neon sm js-quiz" type="button" data-quiz="pioneers">Start Quiz</button>
+          </div>
+        </article>
+      </div>
+
+      <ul class="protocol">
+        <li class="reveal"><b>01</b><span>Pick a signal — every round is topic-sealed.</span></li>
+        <li class="reveal" style="--d:.08s"><b>02</b><span>Answer under a soft clock; feedback arrives instantly.</span></li>
+        <li class="reveal" style="--d:.16s"><b>03</b><span>Keep the daily streak and watch recall compound.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section cross-cta">
+    <div class="container glass-band reveal">
+      <p class="band-kicker">Next orbit</p>
+      <h2 class="band-title">Give the facts a <em>story</em>.</h2>
+      <a class="btn btn-neon" href="index-5.html">Enter the Digital Library</a>
+    </div>
+  </section>
+
+</main>
+
+<div class="quiz-modal" id="quizModal" role="dialog" aria-modal="true" aria-labelledby="qmQ" hidden>
+  <div class="qm-panel glass">
+    <button class="qm-close" id="qmClose" type="button" aria-label="Close quiz">×</button>
+    <p class="qm-step" id="qmStep">Question 1 of 3</p>
+    <h2 class="qm-q" id="qmQ"></h2>
+    <div class="qm-opts" id="qmOpts"></div>
+    <p class="qm-feed" id="qmFeed" aria-live="polite"></p>
+    <div class="qm-bar"><span id="qmBar"></span></div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-main container">
+    <div class="footer-brand">
+      <p class="footer-logo">VEER VIGYAN</p>
+      <p class="footer-tag">Knowledge Beyond Boundaries.</p>
+      <p class="footer-note">Notes · Tests · Quizzes · Books — one orbit, one learner, no limits.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <h2 class="footer-h">Navigate</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index-2.html">Notes</a></li>
+        <li><a href="index-3.html">Test Series</a></li>
+        <li><a href="index-4.html">Quiz</a></li>
+        <li><a href="index-5.html">Books</a></li>
+      </ul>
+    </nav>
+    <div class="footer-meta">
+      <h2 class="footer-h">Signal</h2>
+      <p>hello@veervigyan.com</p>
+      <p>Mon–Sat · 09:00–19:00 IST</p>
+      <p>Orbiting since 2026</p>
+    </div>
+  </div>
+  <div class="footer-base container">
+    <p>© 2026 Veer Vigyan. Crafted for curious minds.</p>
+    <a class="top-link" href="#top">Return to orbit ↑</a>
+
+<title>Books — The Digital Library | VEER VIGYAN</title>
+<meta name="description" content="A curated digital library of science books — physics, chemistry, mathematics, biology and astronomy, chosen to turn facts into stories.">
+<link rel="canonical" href="https://veervigyan.com/index-5.html">
+<meta name="theme-color" content="#04060c">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Books — The Digital Library | Veer Vigyan">
+<meta property="og:description" content="Seventy-five curated titles where facts become stories.">
+<meta property="og:url" content="https://veervigyan.com/index-5.html">
+<meta property="og:image" content="https://picsum.photos/seed/veer-digital-library/1200/630">
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><circle cx="16" cy="16" r="4.5" fill="%235fd9ff"/><circle cx="16" cy="16" r="11.5" fill="none" stroke="%235fd9ff" stroke-opacity=".4"/></svg>'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Books — The Digital Library","url":"https://veervigyan.com/index-5.html","isPartOf":{"@type":"WebSite","name":"Veer Vigyan"}}</script>
+<noscript><style>.reveal,.tcard,.mask-line{opacity:1!important;transform:none!important;filter:none!important}.loader{display:none}</style></noscript>
+</head>
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+<canvas class="stars" id="stars" aria-hidden="true"></canvas>
+<div class="noise" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+
+<header class="nav-shell">
+  <nav class="nav" aria-label="Primary">
+    <a class="brand" href="index.html" aria-label="Veer Vigyan — home">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-name">VEER<em>VIGYAN</em></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu">
+      <span class="nt-line" aria-hidden="true"></span><span class="nt-line" aria-hidden="true"></span><span class="nt-line" aria-hidden="true"></span>
+    </button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index-2.html">Notes</a></li>
+      <li><a href="index-3.html">Test Series</a></li>
+      <li><a href="index-4.html">Quiz</a></li>
+      <li><a href="index-5.html" class="active" aria-current="page">Books</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="orb-mark" aria-hidden="true"><i></i><i></i><b></b></div>
+    <div class="container">
+      <p class="eyebrow" data-scramble>Section 05 · The Shelf</p>
+      <h1 class="ph-title mask-grp"><span class="mask"><span class="mask-line">The Digital <em>Library</em></span></span></h1>
+      <p class="ph-sub reveal">Seventy-five titles chosen for one reason: they make the universe feel personal. Read them between decks, after tests, before sleep.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-label="Books collection">
+    <div class="container">
+      <article class="featured-book reveal">
+        <figure class="fb-cover kb">
+          <img src="https://picsum.photos/seed/veer-starlight-atlas/560/740" alt="Cover of Starlight Atlas, the book of the month" loading="eager" width="560" height="740">
+        </figure>
+        <div class="fb-body">
+          <span class="badge badge-hot">Book of the month</span>
+          <h2 class="fb-title">Starlight Atlas</h2>
+          <p class="fb-author">Capt. R. Malhotra · Astronomy · 2026</p>
+          <p class="fb-desc">A navigator’s tour of the night sky written for students who have never owned a telescope. Constellations become addresses, distances become stories, and the exam syllabus quietly turns into wonder.</p>
+          <ul class="fb-meta">
+            <li><span>Pages</span><b>312</b></li>
+            <li><span>Reading level</span><b>Class 9+</b></li>
+            <li><span>Format</span><b>Digital · Audio</b></li>
+          </ul>
+          <a class="btn btn-neon" href="#shelf">Read now</a>
+        </div>
+      </article>
+
+      <div class="cards-grid shelf" id="shelf">
+        <article class="tcard bcard reveal">
+          <span class="tcard-glow" aria-hidden="true"></span>
+          <div class="tcard-inner">
+            <figure class="bcover"><img src="https://picsum.photos/seed/veer-orbit-physics/420/560" alt="Cover of The Orbit Within" loading="lazy" width="420" height="560"></figure>
+            <h3 class="tcard-title">The Orbit Within</h3>
+            <p class="tcard-meta">Dr. Aarya Raman · Physics</p>
+            <p class="tcard-desc">A guided flight through mechanics — from falling apples to escaping rockets.</p>
+            <a class="btn btn-ghost sm" href="#shelf">Read</a>
+          </div>
+        </article>
+        <article class="tcard bcard reveal" style="--d:.06s">
+          <span class="tcard-glow" aria-hidden="true"></span>
+          <div class="tcard-inner">
+            <figure class="bcover"><img src="https://picsum.photos/seed/veer-molecules-meaning/420/560" alt="Cover of Molecules and Meaning" loading="lazy" width="420" height="560"></figure>
+            <h3 class="tcard-title">Molecules &amp; Meaning</h3>
+            <p class="tcard-meta">Prof. K. Banerjee · Chemistry</p>
+            <p class="tcard-desc">Why matter behaves — bonds, reactions and the logic behind every equation.</p>
+            <a class="btn btn-ghost sm" href="#shelf">Read</a>
+          </div>
+        </article>
+        <article class="tcard bcard reveal" style="--d:.12s">
+          <span class="tcard-glow" aria-hidden="true"></span>
+          <div class="tcard-inner">
+            <figure class="bcover"><img src="https://picsum.photos/seed/veer-infinite-ascent/420/560" alt="Cover of Infinite Ascent" loading="lazy" width="420" height="560"></figure>
+            <h3 class="tcard-title">Infinite Ascent</h3>
+            <p class="tcard-meta">Meera Iyer · Mathematics</p>
+            <p class="tcard-desc">Mathematics as a climb — each theorem a handhold, each proof a ledge.</p>
+            <a class="btn btn-ghost sm" href="#shelf">Read</a>
+          </div>
+        </article>
+        <article class="tcard bcard reveal">
+          <span class="tcard-glow" aria-hidden="true"></span>
+          <div class="tcard-inner">
+            <figure class="bcover"><img src="https://picsum.photos/seed/veer-living-code/420/560" alt="Cover of The Living Code" loading="lazy" width="420" height="560"></figure>
+            <h3 class="tcard-title">The Living Code</h3>
+            <p class="tcard-meta">Dr. N. Krishnan · Biology</p>
+            <p class="tcard-desc">Cells, genes and the four-billion-year experiment happening inside you.</p>
+            <a class="btn btn-ghost sm" href="#shelf">Read</a>
+          </div>
+        </article>
+        <article class="tcard bcard reveal" style="--d:.06s">
+          <span class="tcard-glow" aria-hidden="true"></span>
+          <div class="tcard-inner">
+            <figure class="bcover"><img src="https://picsum.photos/seed/veer-starlight-atlas-cover/420/560" alt="Cover of Starlight Atlas" loading="lazy" width="420" height="560"></figure>
+            <h3 class="tcard-title">Starlight Atlas</h3>
+            <p class="tcard-meta">Capt. R. Malhotra · Astronomy</p>
+            <p class="tcard-desc">The night sky decoded for readers without telescopes — or patience.</p>
+            <a class="btn btn-ghost sm" href="#shelf">Read</a>
+          </div>
+        </article>
+        <article class="tcard bcard reveal" style="--d:.12s">
+          <span class="tcard-glow" aria-hidden="true"></span>
+          <div class="tcard-inner">
+            <figure class="bcover"><img src="https://picsum.photos/seed/veer-curious-method/420/560" alt="Cover of The Curious Method" loading="lazy" width="420" height="560"></figure>
+            <h3 class="tcard-title">The Curious Method</h3>
+            <p class="tcard-meta">Sara Qureshi · Study craft</p>
+            <p class="tcard-desc">How to study like a scientist — hypotheses about your own habits, tested weekly.</p>
+            <a class="btn btn-ghost sm" href="#shelf">Read</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="reading-room glass reveal">
+        <p class="rr-quote">“A reader lives a thousand experiments before the first exam.”</p>
+        <div class="rr-stats">
+          <div><b>75</b><span>titles</span></div>
+          <div><b>06</b><span>shelves</span></div>
+          <div><b>4.8★</b><span>avg. reader rating</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cross-cta">
+    <div class="container glass-band reveal">
+      <p class="band-kicker">Next orbit</p>
+      <h2 class="band-title">Turn the story back into <em>structure</em>.</h2>
+      <a class="btn btn-neon" href="index-2.html">Return to the Notes</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-main container">
+    <div class="footer-brand">
+      <p class="footer-logo">VEER VIGYAN</p>
+      <p class="footer-tag">Knowledge Beyond Boundaries.</p>
+      <p class="footer-note">Notes · Tests · Quizzes · Books — one orbit, one learner, no limits.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <h2 class="footer-h">Navigate</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index-2.html">Notes</a></li>
+        <li><a href="index-3.html">Test Series</a></li>
+        <li><a href="index-4.html">Quiz</a></li>
+        <li><a href="index-5.html">Books</a></li>
+      </ul>
+    </nav>
+    <div class="footer-meta">
+      <h2 class="footer-h">Signal</h2>
+      <p>hello@veervigyan.com</p>
+      <p>Mon–Sat · 09:00–19:00 IST</p>
+      <p>Orbiting since 2026</p>
+    </div>
+  </div>
+  <div class="footer-base container">
+    <p>© 2026 Veer Vigyan. Crafted for curious minds.</p>
+    <a class="top-link" href="#top">Return to orbit ↑</a>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
